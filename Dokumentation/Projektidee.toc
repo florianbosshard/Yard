@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}Spielbeschreibung}{2}
+\contentsline {section}{\numberline {2}Ziele}{2}
+\contentsline {section}{\numberline {3}Anwender}{2}
+\contentsline {section}{\numberline {4}Anwendungsf\IeC {\"a}lle}{2}
+\contentsline {section}{\numberline {5}GUI}{3}
+\contentsline {section}{\numberline {6}Erweiterungsm\IeC {\"o}glichkeiten}{5}

@@ -14,16 +14,19 @@
 \begin{document}
 \maketitle
 
+\tableofcontents
+\newpage
+
 \section{Spielbeschreibung}
 In diesem Projekt wird eine Schnitzeljagd ähnlich dem Spiel Scotland Yard, durch die Winterthurer Altstadt entwickelt. Daher auch die Projektbezeichnung Winterthur Yard. 
 
-Ziel des Spiels ist es, Mister X zu fangen, der sich an verschiedenen Punkten in der Altstadt versteckt. Hat man Mister X gefangen, verrät er einem ein Geheimnis, beispielsweise die Koordinaten eines Geocaches \footnote{Versteck des Spiels Geocaching, siehe http://www.geocaching.com}. 
+Ziel des Spiels ist es, MisterX zu fangen, der sich an verschiedenen Punkten in der Altstadt versteckt. Hat man MisterX gefangen, verrät er einem ein Geheimnis, beispielsweise die Koordinaten eines Geocaches \footnote{Versteck des Spiels Geocaching, siehe http://www.geocaching.com}. 
 
-Mister X wird dabei dargestellt durch einen Computerspieler, der sich automatisiert von Punkt zu Punkt bewegt. Der Spieler geht durch die Stadt und versucht Mister X zu finden. Mittels Geolocation gibt er an den einzelnen Knoten seinen Standort bekannt. Wenn er am gleichen Ort ist wie Mister X, so hat er das Spiel gewonnen. Ansonsten sieht er, wo sich Mister X als letztes befunden hatte. Daneben wird ihm auch angezeigt, wo sich andere Spieler in diesem Moment gerade befinden. 
+MisterX wird dabei dargestellt durch einen Computerspieler, der sich automatisiert von Punkt zu Punkt bewegt. Der Spieler geht durch die Stadt und versucht MisterX zu finden. Mittels Geolocation gibt er an den einzelnen Knoten seinen Standort bekannt. Wenn er am gleichen Ort ist wie MisterX, so hat er das Spiel gewonnen. Ansonsten sieht er, wo sich MisterX als letztes befunden hatte. Daneben wird ihm auch angezeigt, wo sich andere Spieler in diesem Moment gerade befinden. 
 
-In der Applikation kann die Funktion "Mister X fangen" aufgerufen werden sobald man physisch an einem der definierten Knoten ist. Ist Mister X an diesem Knoten, so hat man das Spiel gewonnen. Ansonsten sieht man, wo sich Mister X als letztes befunden hatte. Zudem sieht man, wo andere Mitspieler sich befinden. So ist es möglich koordiniert miteinander vorzugehen. 
+In der Applikation kann die Funktion "MisterX fangen" aufgerufen werden sobald man physisch an einem der definierten Knoten ist. Ist MisterX an diesem Knoten, so hat man das Spiel gewonnen. Ansonsten sieht man, wo sich MisterX als letztes befunden hatte. Zudem sieht man, wo andere Mitspieler sich befinden. So ist es möglich koordiniert miteinander vorzugehen. 
 
-Mister X wechselt seinen Standort in einem definierten Zeitintervall und bewegt sich immer nur den Graphen zwischen den einzelnen Knoten entlang. Er gibt jeweils nur den Punkt an, an dem er als letztes war, nicht wo er sich aktuell befindet. 
+MisterX wechselt seinen Standort in einem definierten Zeitintervall und bewegt sich immer nur den Graphen zwischen den einzelnen Knoten entlang. Er gibt jeweils nur den Punkt an, an dem er als letztes war, nicht wo er sich aktuell befindet. 
 
 \section{Ziele}
 Für die Spielenden:

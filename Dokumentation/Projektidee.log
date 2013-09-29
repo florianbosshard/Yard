@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.9.29)  29 SEP 2013 19:32
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.9.29)  29 SEP 2013 20:09
 entering extended mode
 **Projektidee.tex
 (C:\Users\Maja\Documents\ZHAW\WBE\Projekt\Yard\Dokumentation\Projektidee.tex
@@ -375,77 +375,82 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 15.
+(C:\Users\Maja\Documents\ZHAW\WBE\Projekt\Yard\Dokumentation\Projektidee.toc)
+\tf@toc=\write3
+
+[1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 20.
+(Font)              <10.95> on input line 23.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 20.
+(Font)              <9> on input line 23.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 20.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 31.
+(Font)              <5> on input line 23.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 34.
+
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
- [1
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 34.
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<Bilder/homeView.jpg, id=13, 481.8pt x 702.625pt>
+<Bilder/homeView.jpg, id=10, 481.8pt x 702.625pt>
 File: Bilder/homeView.jpg Graphic file (type jpg)
  <use Bilder/homeView.jpg>
-Package pdftex.def Info: Bilder/homeView.jpg used on input line 43.
+Package pdftex.def Info: Bilder/homeView.jpg used on input line 46.
 (pdftex.def)             Requested size: 227.62204pt x 331.94917pt.
 
-<Bilder/karteView.jpg, id=14, 481.8pt x 702.625pt>
+<Bilder/karteView.jpg, id=11, 481.8pt x 702.625pt>
 File: Bilder/karteView.jpg Graphic file (type jpg)
  <use Bilder/karteView.jpg>
-Package pdftex.def Info: Bilder/karteView.jpg used on input line 44.
+Package pdftex.def Info: Bilder/karteView.jpg used on input line 47.
 (pdftex.def)             Requested size: 227.62204pt x 331.94917pt.
 
-<Bilder/gefundenView.jpg, id=15, 481.8pt x 702.625pt>
+<Bilder/gefundenView.jpg, id=12, 481.8pt x 702.625pt>
 File: Bilder/gefundenView.jpg Graphic file (type jpg)
 
 <use Bilder/gefundenView.jpg>
-Package pdftex.def Info: Bilder/gefundenView.jpg used on input line 45.
+Package pdftex.def Info: Bilder/gefundenView.jpg used on input line 48.
 (pdftex.def)             Requested size: 227.62204pt x 331.94917pt.
 
-<Bilder/danebenView.jpg, id=16, 481.8pt x 702.625pt>
+<Bilder/danebenView.jpg, id=13, 481.8pt x 702.625pt>
 File: Bilder/danebenView.jpg Graphic file (type jpg)
 
 <use Bilder/danebenView.jpg>
-Package pdftex.def Info: Bilder/danebenView.jpg used on input line 46.
+Package pdftex.def Info: Bilder/danebenView.jpg used on input line 49.
 (pdftex.def)             Requested size: 227.62204pt x 331.94917pt.
 
-<Bilder/keinePositionView.jpg, id=17, 481.8pt x 702.625pt>
+<Bilder/keinePositionView.jpg, id=14, 481.8pt x 702.625pt>
 File: Bilder/keinePositionView.jpg Graphic file (type jpg)
 
 <use Bilder/keinePositionView.jpg>
-Package pdftex.def Info: Bilder/keinePositionView.jpg used on input line 47.
+Package pdftex.def Info: Bilder/keinePositionView.jpg used on input line 50.
 (pdftex.def)             Requested size: 227.62204pt x 331.94917pt.
 
-<Bilder/hilfeView.jpg, id=18, 481.8pt x 702.625pt>
+<Bilder/hilfeView.jpg, id=15, 481.8pt x 702.625pt>
 File: Bilder/hilfeView.jpg Graphic file (type jpg)
  <use Bilder/hilfeView.jpg>
-Package pdftex.def Info: Bilder/hilfeView.jpg used on input line 48.
+Package pdftex.def Info: Bilder/hilfeView.jpg used on input line 51.
 (pdftex.def)             Requested size: 227.62204pt x 331.94917pt.
 
-<Bilder/ueberView.jpg, id=19, 481.8pt x 702.625pt>
+<Bilder/ueberView.jpg, id=16, 481.8pt x 702.625pt>
 File: Bilder/ueberView.jpg Graphic file (type jpg)
  <use Bilder/ueberView.jpg>
-Package pdftex.def Info: Bilder/ueberView.jpg used on input line 49.
+Package pdftex.def Info: Bilder/ueberView.jpg used on input line 52.
 (pdftex.def)             Requested size: 227.62204pt x 331.94917pt.
 
-Overfull \hbox (39.42374pt too wide) in paragraph at lines 43--50
+Overfull \hbox (39.42374pt too wide) in paragraph at lines 46--53
 [] []
  []
 
 
-Overfull \hbox (39.42374pt too wide) in paragraph at lines 43--50
+Overfull \hbox (39.42374pt too wide) in paragraph at lines 46--53
 [] []
  []
 
 
-Overfull \hbox (39.42374pt too wide) in paragraph at lines 43--50
+Overfull \hbox (39.42374pt too wide) in paragraph at lines 46--53
 [] []
  []
 
@@ -464,24 +469,25 @@ E/Projekt/Yard/Dokumentation/Bilder/ueberView.jpg>]
 (C:\Users\Maja\Documents\ZHAW\WBE\Projekt\Yard\Dokumentation\Projektidee.aux) )
  
 Here is how much of TeX's memory you used:
- 1893 strings out of 493921
- 25760 string characters out of 3144879
+ 1898 strings out of 493921
+ 25938 string characters out of 3144879
  85252 words of memory out of 3000000
- 5185 multiletter control sequences out of 15000+200000
- 9108 words of font info for 32 fonts, out of 3000000 for 9000
+ 5186 multiletter control sequences out of 15000+200000
+ 9416 words of font info for 33 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,8n,19p,500b,199s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Projektidee.pdf (5 pages, 561972 bytes).
+ 27i,8n,19p,496b,199s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Projektidee.pdf (5 pages, 575316 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
+ 61 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
