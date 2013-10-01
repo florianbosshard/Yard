@@ -18,15 +18,14 @@
 \newpage
 
 \section{Spielbeschreibung}
-In diesem Projekt wird eine Schnitzeljagd ähnlich dem Spiel Scotland Yard, durch die Winterthurer Altstadt entwickelt. Daher auch die Projektbezeichnung Winterthur Yard. 
-
+In diesem Projekt wird eine Schnitzeljagd ähnlich dem Spiel Scotland Yard, durch die Winterthurer Altstadt entwickelt. Daher auch die ähnliche Projektbezeichnung Winterthur Yard. 
+\\\\
 Ziel des Spiels ist es, MisterX zu fangen, der sich an verschiedenen Punkten in der Altstadt versteckt. Hat man MisterX gefangen, verrät er einem ein Geheimnis, beispielsweise die Koordinaten eines Geocaches \footnote{Versteck des Spiels Geocaching, siehe http://www.geocaching.com}. 
+\\
+MisterX wird dabei durch einen Computerspieler dargestellt, der sich automatisch von Punkt zu Punkt bewegt. Der Spieler geht durch die Stadt und versucht MisterX zu finden. 
+\\\\
+Über die Karte ist ein Graph entlang den Strassen und Gassen der Altstadt gelegt. MisterX wechselt seinen Standort in einem definierten Zeitintervall und bewegt sich immer nur den Kanten zwischen den einzelnen Knoten entlang. In der Applikation kann die Funktion "MisterX fangen" aufgerufen werden sobald man physisch an einem der definierten Knoten ist. Mittels Geolocation gibt er dadurch an den einzelnen Knoten seinen Standort bekannt. Befindet er sich am selben Ort wie MisterX, so hat er das Spiel gewonnen. Ansonsten sieht er, wo sich MisterX als letztes aufgehalten hatte. Zudem wird ihm  angezeigt, wo sich andere Spieler bei deren letzten Anfrage befanden. So ist es möglich koordiniert miteinander vorzugehen.
 
-MisterX wird dabei dargestellt durch einen Computerspieler, der sich automatisiert von Punkt zu Punkt bewegt. Der Spieler geht durch die Stadt und versucht MisterX zu finden. Mittels Geolocation gibt er an den einzelnen Knoten seinen Standort bekannt. Wenn er am gleichen Ort ist wie MisterX, so hat er das Spiel gewonnen. Ansonsten sieht er, wo sich MisterX als letztes befunden hatte. Daneben wird ihm auch angezeigt, wo sich andere Spieler in diesem Moment gerade befinden. 
-
-In der Applikation kann die Funktion "MisterX fangen" aufgerufen werden sobald man physisch an einem der definierten Knoten ist. Ist MisterX an diesem Knoten, so hat man das Spiel gewonnen. Ansonsten sieht man, wo sich MisterX als letztes befunden hatte. Zudem sieht man, wo andere Mitspieler sich befinden. So ist es möglich koordiniert miteinander vorzugehen. 
-
-MisterX wechselt seinen Standort in einem definierten Zeitintervall und bewegt sich immer nur den Graphen zwischen den einzelnen Knoten entlang. Er gibt jeweils nur den Punkt an, an dem er als letztes war, nicht wo er sich aktuell befindet. 
 
 \section{Ziele}
 Für die Spielenden:
@@ -39,8 +38,21 @@ Für die Spielenden:
 \section{Anwender}
 Florian
 
+\pagebreak
 \section{Anwendungsfälle}
-Raphael
+\subsection{Anfrage an einem Knoten}
+Befindet sich der Spieler an einem Knoten, so kann er eine Anfrage an den Spielserver absetzen, welche ihm die aktuelle und vorhergehende Position von MisterX, sowie die letzte Abfrageposition der anderen Spieler zurückgibt. Stimmt die aktuelle Position von MisterX mit der eigenen Position überein, wird dem Spieler mitgeteilt, dass er MisterX gefunden hat. Befindet sich MisterX an einer anderen Position wird dem Spieler auf der Karte die Position angezeigt an welcher  MisterX sich vor seiner letzten Verschiebung befand. Ebenso werden dem Spieler die letzten Abfragepositionen der übrigen Spieler angezeigt.
+Befindet sich der Spieler nicht an einem Knoten, kann keine Anfrage abgesetzt werden.
+
+\subsection{Anzeige der aktuellen Position}
+Befindet sich der Spieler im Spielbereich wird diesem auf der Karte seine aktuelle Position angezeigt welche regelmässig aktualisiert wird. Für andere Spieler ist lediglich der letzte Anfrageort ersichtlich.
+
+\subsection{Neue Teilnahme am Spiel}
+Nach Eingabe des Spielernamens gelangt der Spieler auf die Karte mit dem Spiel-Graphen wo seine aktuelle Position angezeigt wird.
+\\\\
+Um mit dem Spiel beginnen zu können muss sich der Spieler zu einem Knoten begeben und eine erste Anfrage absetzen. Bis zu diesem Zeitpunkt sind noch keine Spielaktivitäten ersichtlich.
+Für andere Spieler wird der neue Spieler erst ab der ersten Anfrage sichtbar.
+
 
 \section{GUI}
 \includegraphics[width=8cm]{Bilder/homeView.jpg}

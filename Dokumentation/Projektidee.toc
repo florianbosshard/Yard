@@ -1,6 +1,9 @@
 \contentsline {section}{\numberline {1}Spielbeschreibung}{2}
 \contentsline {section}{\numberline {2}Ziele}{2}
 \contentsline {section}{\numberline {3}Anwender}{2}
-\contentsline {section}{\numberline {4}Anwendungsf\IeC {\"a}lle}{2}
-\contentsline {section}{\numberline {5}GUI}{3}
-\contentsline {section}{\numberline {6}Erweiterungsm\IeC {\"o}glichkeiten}{5}
+\contentsline {section}{\numberline {4}Anwendungsf\IeC {\"a}lle}{3}
+\contentsline {subsection}{\numberline {4.1}Anfrage an einem Knoten}{3}
+\contentsline {subsection}{\numberline {4.2}Anzeige der aktuellen Position}{3}
+\contentsline {subsection}{\numberline {4.3}Neue Teilnahme am Spiel}{3}
+\contentsline {section}{\numberline {5}GUI}{4}
+\contentsline {section}{\numberline {6}Erweiterungsm\IeC {\"o}glichkeiten}{6}
