@@ -1,0 +1,14 @@
+   * {
+   	margin: 0; 
+   	padding: 0;
+   }
+   html, body, #osMap, .test100 {
+      width: 100%;
+      height: 100%;
+  }
+  
+  /* Reset JQuery Mobile Stylesheet */
+.ui-content {
+	padding: 0;
+	
+}
