@@ -2,7 +2,7 @@
    	margin: 0; 
    	padding: 0;
    }
-   html, body, #osMap, .test100 {
+   html, body, #map, #page, #content{
       width: 100%;
       height: 100%;
   }
