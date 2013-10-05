@@ -1,0 +1,18 @@
+==Anmelden
+--Anfrage
+Name
+Antwort
+ACK
+==MisterX fangen
+--Anfrage
+Location, evtl. Accuracy
+
+--Antwort
+•	Gewonnen?
+o	Koordinaten des Geocaches
+•	Koordinaten Mister X (letzte Position)
+•	Koordinaten Spieler / Namen Spieler
+
+
+
+
