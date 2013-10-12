@@ -3,15 +3,13 @@ var yard = {
 	initMap : function() {
 		map = new L.Map('map', {
 			center : new L.LatLng(47.49901, 8.728935),
-			zoom : 17
+			zoom : 17, 
+			maxZoom : 19,
+			minZoom: 14
 		});
 
-		// create a new tile layer
-		var tileUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', layer = new L.TileLayer(tileUrl, {
-			maxZoom : 20
-		});
+		var tileUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', layer = new L.TileLayer(tileUrl);
 
-		// add the layer to the map
 		map.addLayer(layer);
 	},
 	markUserLocation : function() {
@@ -19,10 +17,10 @@ var yard = {
 			navigator.geolocation.getCurrentPosition(function(position) {
 				ownPositionMarker = L.marker([position.coords.latitude, position.coords.longitude]).addTo(map);
 			}, function(error) {
-				console.log(error);
+				alert(error);
 			});
 		} else {
-			console.log(error);
+			alert("navigator.geolocation ist ausgeschaltet");
 		}
 	},
 	drawNode : function(lat, lon) {
