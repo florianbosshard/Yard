@@ -35,9 +35,9 @@
    inkscape:window-height="480"
    id="namedview461"
    showgrid="false"
-   inkscape:zoom="0.27747133"
-   inkscape:cx="526.18048"
-   inkscape:cy="372.04742"
+   inkscape:zoom="0.39240372"
+   inkscape:cx="539.72504"
+   inkscape:cy="370.35093"
    inkscape:window-x="0"
    inkscape:window-y="0"
    inkscape:window-maximized="0"
@@ -55,7 +55,7 @@
 		.st2 {fill:#000000;font-family:Arial;font-size:0.666664em}
 		.st3 {font-size:1em;text-decoration:underline}
 		.st4 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.239976}
-		.st5 {marker-end:url(#mrkr4-52);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.239976}
+		.st5 {marker-end:url(#mrkr4-46);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.239976}
 		.st6 {fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.086948582161584}
 		.st7 {fill:#ffffff;stroke:none;stroke-linecap:butt;stroke-width:7.2}
 		.st8 {fill:none;fill-rule:evenodd;font-size:12;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
@@ -72,7 +72,7 @@
    id="path8" />
 		</g>
 		<marker
-   id="mrkr4-52"
+   id="mrkr4-46"
    class="st6"
    v:arrowType="4"
    v:arrowSize="2"
@@ -90,8 +90,7 @@
    v:mID="0"
    v:index="1"
    v:groupContext="foregroundPage"
-   id="g13"
-   transform="translate(0,-8.6495548)">
+   id="g13">
 		<title
    id="title15">Zeichenblatt-1</title>
 		<v:pageProperties
@@ -278,114 +277,14 @@
    v:horizAlign="1" /><v:tabList />Abfrage</text>
 		</g>
 		<g
-   id="group7-10"
-   transform="translate(312.944,-339.831)"
-   v:mID="7"
-   v:groupContext="group">
-			<title
-   id="title45">Tabelle.7</title>
-			<g
-   id="shape6-11"
-   v:mID="6"
-   v:groupContext="shape"
-   v:layerMember="0">
-				<title
-   id="title48">Prozess.6</title>
-				<v:custProps>
-					<v:cp
-   v:nameU="Cost"
-   v:lbl="Kosten"
-   v:type="7"
-   v:format="@"
-   v:langID="1031" />
-					<v:cp
-   v:nameU="Duration"
-   v:lbl="Dauer"
-   v:type="2"
-   v:langID="1031" />
-					<v:cp
-   v:nameU="Resources"
-   v:lbl="Ressourcen"
-   v:langID="1031" />
-				</v:custProps>
-				<v:userDefs>
-					<v:ud
-   v:nameU="visVersion"
-   v:val="VT0(12):26" />
-				</v:userDefs>
-				<rect
-   x="0"
-   y="542.22998"
-   width="130.70799"
-   height="53.045799"
-   class="st1"
-   id="rect50"
-   style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
-			</g>
-			<g
-   id="shape5-13"
-   v:mID="5"
-   v:groupContext="shape"
-   v:layerMember="0">
-				<title
-   id="title53">Entscheidung.5</title>
-				<desc
-   id="desc55">Position</desc>
-				<v:custProps>
-					<v:cp
-   v:nameU="Cost"
-   v:lbl="Kosten"
-   v:type="7"
-   v:format="@"
-   v:langID="1031" />
-					<v:cp
-   v:nameU="Duration"
-   v:lbl="Dauer"
-   v:type="2"
-   v:langID="1031" />
-					<v:cp
-   v:nameU="Resources"
-   v:lbl="Ressourcen"
-   v:langID="1031" />
-				</v:custProps>
-				<v:userDefs>
-					<v:ud
-   v:nameU="visVersion"
-   v:val="VT0(12):26" />
-				</v:userDefs>
-				<v:textBlock
-   v:margins="rect(2,2,2,2)"
-   v:tabSpace="42.5197" />
-				<v:textRect
-   cx="65.3542"
-   cy="568.753"
-   width="108.93"
-   height="39.7844" />
-				<path
-   d="M 0,568.75 65.35,542.23 130.71,568.75 65.35,595.28 0,568.75 z"
-   class="st1"
-   id="path57"
-   inkscape:connector-curvature="0"
-   style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
-				<text
-   x="51.119999"
-   y="571.15002"
-   class="st2"
-   v:langID="2055"
-   id="text59"
-   style="fill:#000000;font-family:Arial"><v:paragraph
-   v:horizAlign="1" /><v:tabList />Position</text>
-			</g>
-		</g>
-		<g
-   id="shape10-16"
+   id="shape10-10"
    v:mID="10"
    v:groupContext="shape"
    transform="translate(65.9055,-399.583)">
 			<title
-   id="title62">Ellipse</title>
+   id="title45">Ellipse</title>
 			<desc
-   id="desc64">S#</desc>
+   id="desc47">S#</desc>
 			<v:userDefs>
 				<v:ud
    v:nameU="visVersion"
@@ -402,7 +301,7 @@
 			<path
    d="m 0,578.94 a 26.1417,16.3385 0 1 1 52.28,0 26.1417,16.3385 0 1 1 -52.28,0 z"
    class="st1"
-   id="path66"
+   id="path49"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
 			<text
@@ -410,25 +309,25 @@
    y="581.34003"
    class="st2"
    v:langID="2055"
-   id="text68"
+   id="text51"
    style="fill:#000000;font-family:Arial"><v:paragraph
      v:horizAlign="1" /><v:tabList /><tspan
      class="st3"
-     id="tspan70"
+     id="tspan53"
      style="text-decoration: underline">S</tspan><tspan
      class="st3"
-     id="tspan72"
+     id="tspan55"
      style="text-decoration: underline">#</tspan></text>
 		</g>
 		<g
-   id="shape12-21"
+   id="shape12-15"
    v:mID="12"
    v:groupContext="shape"
    transform="translate(665.416,-357.42)">
 			<title
-   id="title75">Ellipse.12</title>
+   id="title58">Ellipse.12</title>
 			<desc
-   id="desc77">K#</desc>
+   id="desc60">K#</desc>
 			<v:userDefs>
 				<v:ud
    v:nameU="visVersion"
@@ -445,7 +344,7 @@
 			<path
    d="m 0,578.94 a 26.1417,16.3385 0 1 1 52.28,0 26.1417,16.3385 0 1 1 -52.28,0 z"
    class="st1"
-   id="path79"
+   id="path62"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
 			<text
@@ -453,25 +352,24 @@
    y="581.34003"
    class="st2"
    v:langID="2055"
-   id="text81"
+   id="text64"
    style="fill:#000000;font-family:Arial"><v:paragraph
      v:horizAlign="1" /><v:tabList /><tspan
      class="st3"
-     id="tspan83"
-     style="text-decoration: underline">K</tspan><tspan
+     id="tspan66">K</tspan><tspan
      class="st3"
-     id="tspan85"
+     id="tspan68"
      style="text-decoration: underline">#</tspan></text>
 		</g>
 		<g
-   id="shape11-26"
+   id="shape11-20"
    v:mID="11"
    v:groupContext="shape"
    transform="translate(213.606,-275.57)">
 			<title
-   id="title88">Ellipse.11</title>
+   id="title71">Ellipse.11</title>
 			<desc
-   id="desc90">K#</desc>
+   id="desc73">K#</desc>
 			<v:userDefs>
 				<v:ud
    v:nameU="visVersion"
@@ -488,7 +386,7 @@
 			<path
    d="m 0,578.94 a 26.1417,16.3385 0 1 1 52.28,0 26.1417,16.3385 0 1 1 -52.28,0 z"
    class="st1"
-   id="path92"
+   id="path75"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
 			<text
@@ -496,19 +394,19 @@
    y="581.34003"
    class="st2"
    v:langID="2055"
-   id="text94"
+   id="text77"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />K#</text>
 		</g>
 		<g
-   id="shape13-29"
+   id="shape13-23"
    v:mID="13"
    v:groupContext="shape"
    transform="translate(691.558,-224.192)">
 			<title
-   id="title97">Ellipse.13</title>
+   id="title80">Ellipse.13</title>
 			<desc
-   id="desc99">K1#</desc>
+   id="desc82">K1#</desc>
 			<v:userDefs>
 				<v:ud
    v:nameU="visVersion"
@@ -525,7 +423,7 @@
 			<path
    d="m 0,578.94 a 26.1417,16.3385 0 1 1 52.28,0 26.1417,16.3385 0 1 1 -52.28,0 z"
    class="st1"
-   id="path101"
+   id="path84"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
 			<text
@@ -533,64 +431,64 @@
    y="581.34003"
    class="st2"
    v:langID="2055"
-   id="text103"
+   id="text86"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />K1#</text>
 		</g>
 		<g
-   id="shape14-32"
+   id="shape14-26"
    v:mID="14"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(118.18,-409.495)">
 			<title
-   id="title106">Dynamischer Verbinder.14</title>
+   id="title89">Dynamischer Verbinder.14</title>
 			<path
    d="m 0,588.42 28.76,-0.47"
    class="st4"
-   id="path108"
+   id="path91"
    inkscape:connector-curvature="0"
    style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round" />
 		</g>
 		<g
-   id="shape15-35"
+   id="shape15-29"
    v:mID="15"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(265.267,-293.592)">
 			<title
-   id="title111">Dynamischer Verbinder.15</title>
+   id="title94">Dynamischer Verbinder.15</title>
 			<path
    d="m 0,600.5 26.76,3.72"
    class="st4"
-   id="path113"
+   id="path96"
    inkscape:connector-curvature="0"
    style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round" />
 		</g>
 		<g
-   id="shape16-38"
+   id="shape16-32"
    v:mID="16"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(647.117,-250.82)">
 			<title
-   id="title116">Dynamischer Verbinder.16</title>
+   id="title99">Dynamischer Verbinder.16</title>
 			<path
    d="m 0,600.88 44.59,2.96"
    class="st4"
-   id="path118"
+   id="path101"
    inkscape:connector-curvature="0"
    style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round" />
 		</g>
 		<g
-   id="shape17-41"
+   id="shape17-35"
    v:mID="17"
    v:groupContext="shape"
    transform="translate(691.558,-185.176)">
 			<title
-   id="title121">Ellipse.17</title>
+   id="title104">Ellipse.17</title>
 			<desc
-   id="desc123">K1#</desc>
+   id="desc106">K1#</desc>
 			<v:userDefs>
 				<v:ud
    v:nameU="visVersion"
@@ -607,7 +505,7 @@
 			<path
    d="m 0,578.94 a 26.1417,16.3385 0 1 1 52.28,0 26.1417,16.3385 0 1 1 -52.28,0 z"
    class="st1"
-   id="path125"
+   id="path108"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
 			<text
@@ -615,35 +513,35 @@
    y="581.34003"
    class="st2"
    v:langID="2055"
-   id="text127"
+   id="text110"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />K1#</text>
 		</g>
 		<g
-   id="shape18-44"
+   id="shape18-38"
    v:mID="18"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(342.306,-414.515)">
 			<title
-   id="title130">Dynamischer Verbinder.18</title>
+   id="title113">Dynamischer Verbinder.18</title>
 			<path
    d="m 0,595.28 16.17,21.63"
    class="st4"
-   id="path132"
+   id="path115"
    inkscape:connector-curvature="0"
    style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round" />
 		</g>
 		<g
-   id="shape19-47"
+   id="shape19-41"
    v:mID="19"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(363.766,-295.176)">
 			<title
-   id="title135">Dynamischer Verbinder.19</title>
+   id="title118">Dynamischer Verbinder.19</title>
 			<desc
-   id="desc137">ID</desc>
+   id="desc120">ID</desc>
 			<v:textBlock
    v:margins="rect(4,4,4,4)"
    v:tabSpace="42.5197" />
@@ -655,9 +553,9 @@
 			<path
    d="M 0,595.28 12.82,555.87"
    class="st5"
-   id="path139"
+   id="path122"
    inkscape:connector-curvature="0"
-   style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#mrkr4-52)" />
+   style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#mrkr4-46)" />
 			<rect
    v:rectContext="textBkgnd"
    x="3.2662599"
@@ -665,42 +563,42 @@
    width="7.99997"
    height="9.5998497"
    class="st7"
-   id="rect141"
+   id="rect124"
    style="fill:#ffffff;stroke:none" />
 			<text
    x="3.27"
    y="575.34998"
    class="st2"
    v:langID="2055"
-   id="text143"
+   id="text126"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />ID</text>
 		</g>
 		<g
-   id="shape20-55"
+   id="shape20-49"
    v:mID="20"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(647.117,-226.327)">
 			<title
-   id="title146">Dynamischer Verbinder.20</title>
+   id="title129">Dynamischer Verbinder.20</title>
 			<path
    d="m 0,595.28 47.8,16.8"
    class="st4"
-   id="path148"
+   id="path131"
    inkscape:connector-curvature="0"
    style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round" />
 		</g>
 		<g
-   id="shape21-58"
+   id="shape21-52"
    v:mID="21"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(443.653,-370.153)">
 			<title
-   id="title151">Dynamischer Verbinder.21</title>
+   id="title134">Dynamischer Verbinder.21</title>
 			<desc
-   id="desc153">1</desc>
+   id="desc136">1</desc>
 			<v:textBlock
    v:margins="rect(4,4,4,4)"
    v:tabSpace="42.5197" />
@@ -712,9 +610,9 @@
 			<path
    d="m 0,599.07 67.26,6.08"
    class="st5"
-   id="path155"
+   id="path138"
    inkscape:connector-curvature="0"
-   style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#mrkr4-52)" />
+   style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#mrkr4-46)" />
 			<rect
    v:rectContext="textBkgnd"
    x="34.153301"
@@ -722,27 +620,27 @@
    width="4.4491901"
    height="9.5998497"
    class="st7"
-   id="rect157"
+   id="rect140"
    style="fill:#ffffff;stroke:none" />
 			<text
    x="34.150002"
    y="604.76001"
    class="st2"
    v:langID="2055"
-   id="text159"
+   id="text142"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />1</text>
 		</g>
 		<g
-   id="shape22-65"
+   id="shape22-59"
    v:mID="22"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(312.944,-366.354)">
 			<title
-   id="title162">Dynamischer Verbinder.22</title>
+   id="title145">Dynamischer Verbinder.22</title>
 			<desc
-   id="desc164">m</desc>
+   id="desc147">m</desc>
 			<v:textBlock
    v:margins="rect(4,4,4,4)"
    v:tabSpace="42.5197" />
@@ -754,9 +652,9 @@
 			<path
    d="M 0,595.28 -95.38,565.02"
    class="st5"
-   id="path166"
+   id="path149"
    inkscape:connector-curvature="0"
-   style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#mrkr4-52)" />
+   style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#mrkr4-46)" />
 			<rect
    v:rectContext="textBkgnd"
    x="-53.6548"
@@ -764,26 +662,26 @@
    width="6.6640301"
    height="9.5998497"
    class="st7"
-   id="rect168"
+   id="rect151"
    style="fill:#ffffff;stroke:none" />
 			<text
    x="-53.650002"
    y="581.71997"
    class="st2"
    v:langID="2055"
-   id="text170"
+   id="text153"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />m</text>
 		</g>
 		<g
-   id="shape23-72"
+   id="shape23-66"
    v:mID="23"
    v:groupContext="shape"
    transform="translate(68.5197,-345.992)">
 			<title
-   id="title173">Ellipse.23</title>
+   id="title156">Ellipse.23</title>
 			<desc
-   id="desc175">Name</desc>
+   id="desc158">Name</desc>
 			<v:userDefs>
 				<v:ud
    v:nameU="visVersion"
@@ -800,7 +698,7 @@
 			<path
    d="m 0,578.94 a 35.2913,16.3385 0 0 1 70.58,0 35.2913,16.3385 0 1 1 -70.58,0 z"
    class="st1"
-   id="path177"
+   id="path160"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
 			<text
@@ -808,34 +706,34 @@
    y="581.34003"
    class="st2"
    v:langID="2055"
-   id="text179"
+   id="text162"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />Name</text>
 		</g>
 		<g
-   id="shape24-75"
+   id="shape24-69"
    v:mID="24"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(127.479,-374.45)">
 			<title
-   id="title182">Dynamischer Verbinder.24</title>
+   id="title165">Dynamischer Verbinder.24</title>
 			<path
    d="M 0,595.28 46.53,571.45"
    class="st4"
-   id="path184"
+   id="path167"
    inkscape:connector-curvature="0"
    style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round" />
 		</g>
 		<g
-   id="shape25-78"
+   id="shape25-72"
    v:mID="25"
    v:groupContext="shape"
    transform="translate(305.102,-412.98)">
 			<title
-   id="title187">Ellipse.25</title>
+   id="title170">Ellipse.25</title>
 			<desc
-   id="desc189">S#</desc>
+   id="desc172">S#</desc>
 			<v:userDefs>
 				<v:ud
    v:nameU="visVersion"
@@ -852,7 +750,7 @@
 			<path
    d="m 0,578.94 a 26.1417,16.3385 0 1 1 52.28,0 26.1417,16.3385 0 1 1 -52.28,0 z"
    class="st1"
-   id="path191"
+   id="path174"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
 			<text
@@ -860,19 +758,19 @@
    y="581.34003"
    class="st2"
    v:langID="2055"
-   id="text193"
+   id="text176"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />S#</text>
 		</g>
 		<g
-   id="shape26-81"
+   id="shape26-75"
    v:mID="26"
    v:groupContext="shape"
    transform="translate(404.44,-412.98)">
 			<title
-   id="title196">Ellipse.26</title>
+   id="title179">Ellipse.26</title>
 			<desc
-   id="desc198">K#</desc>
+   id="desc181">K#</desc>
 			<v:userDefs>
 				<v:ud
    v:nameU="visVersion"
@@ -889,7 +787,7 @@
 			<path
    d="m 0,578.94 a 26.1417,16.3385 0 1 1 52.28,0 26.1417,16.3385 0 1 1 -52.28,0 z"
    class="st1"
-   id="path200"
+   id="path183"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
 			<text
@@ -897,34 +795,34 @@
    y="581.34003"
    class="st2"
    v:langID="2055"
-   id="text202"
+   id="text185"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />K#</text>
 		</g>
 		<g
-   id="shape27-84"
+   id="shape27-78"
    v:mID="27"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(418.54,-414.817)">
 			<title
-   id="title205">Dynamischer Verbinder.27</title>
+   id="title188">Dynamischer Verbinder.27</title>
 			<path
    d="m 0,595.28 -18.22,21.94"
    class="st4"
-   id="path207"
+   id="path190"
    inkscape:connector-curvature="0"
    style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round" />
 		</g>
 		<g
-   id="shape28-87"
+   id="shape28-81"
    v:mID="28"
    v:groupContext="shape"
    transform="translate(315.354,-201.515)">
 			<title
-   id="title210">Ellipse.28</title>
+   id="title193">Ellipse.28</title>
 			<desc
-   id="desc212">Zeitpunkt</desc>
+   id="desc195">Zeitpunkt</desc>
 			<v:userDefs>
 				<v:ud
    v:nameU="visVersion"
@@ -941,7 +839,7 @@
 			<path
    d="m 0,578.94 a 38.27,16.339482 0 0 1 76.54,0 38.27,16.339482 0 0 1 -76.54,0 z"
    class="st1"
-   id="path214"
+   id="path197"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
 			<text
@@ -949,49 +847,49 @@
    y="581.34003"
    class="st2"
    v:langID="2055"
-   id="text216"
+   id="text199"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />Zeitpunkt</text>
 		</g>
 		<g
-   id="shape29-90"
+   id="shape29-84"
    v:mID="29"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(348.31,-234.186)">
 			<title
-   id="title219">Dynamischer Verbinder.29</title>
+   id="title202">Dynamischer Verbinder.29</title>
 			<path
    d="M 6.38,595.28 7.8,573.5"
    class="st4"
-   id="path221"
+   id="path204"
    inkscape:connector-curvature="0"
    style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round" />
 		</g>
 		<g
-   id="shape30-93"
+   id="shape30-87"
    v:mID="30"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(296.487,-233.448)">
 			<title
-   id="title224">Dynamischer Verbinder.30</title>
+   id="title207">Dynamischer Verbinder.30</title>
 			<path
    d="M 0,595.28 32.55,572.76"
    class="st4"
-   id="path226"
+   id="path209"
    inkscape:connector-curvature="0"
    style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round" />
 		</g>
 		<g
-   id="shape31-96"
+   id="shape31-90"
    v:mID="31"
    v:groupContext="shape"
    transform="translate(252.818,-204.987)">
 			<title
-   id="title229">Ellipse.31</title>
+   id="title212">Ellipse.31</title>
 			<desc
-   id="desc231">S#</desc>
+   id="desc214">S#</desc>
 			<v:userDefs>
 				<v:ud
    v:nameU="visVersion"
@@ -1008,7 +906,7 @@
 			<path
    d="m 0,578.94 a 26.1417,16.3385 0 1 1 52.28,0 26.1417,16.3385 0 1 1 -52.28,0 z"
    class="st1"
-   id="path233"
+   id="path216"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
 			<text
@@ -1016,34 +914,34 @@
    y="581.34003"
    class="st2"
    v:langID="2055"
-   id="text235"
+   id="text218"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />S#</text>
 		</g>
 		<g
-   id="shape32-99"
+   id="shape32-93"
    v:mID="32"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(666.449,-374.547)">
 			<title
-   id="title238">Dynamischer Verbinder.32</title>
+   id="title221">Dynamischer Verbinder.32</title>
 			<path
    d="m 0,600.61 -19.33,3.5"
    class="st4"
-   id="path240"
+   id="path223"
    inkscape:connector-curvature="0"
    style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round" />
 		</g>
 		<g
-   id="shape33-102"
+   id="shape33-96"
    v:mID="33"
    v:groupContext="shape"
    transform="translate(676.425,-316.318)">
 			<title
-   id="title243">Ellipse.33</title>
+   id="title226">Ellipse.33</title>
 			<desc
-   id="desc245">Longitude</desc>
+   id="desc228">Longitude</desc>
 			<v:userDefs>
 				<v:ud
    v:nameU="visVersion"
@@ -1060,7 +958,7 @@
 			<path
    d="m 0,578.94 a 48.3621,16.3385 0 0 1 96.72,0 48.3621,16.3385 0 1 1 -96.72,0 z"
    class="st1"
-   id="path247"
+   id="path230"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
 			<text
@@ -1068,19 +966,19 @@
    y="581.34003"
    class="st2"
    v:langID="2055"
-   id="text249"
+   id="text232"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />Longitude</text>
 		</g>
 		<g
-   id="shape34-105"
+   id="shape34-99"
    v:mID="34"
    v:groupContext="shape"
    transform="translate(676.425,-273.798)">
 			<title
-   id="title252">Ellipse.34</title>
+   id="title235">Ellipse.34</title>
 			<desc
-   id="desc254">Latitude</desc>
+   id="desc237">Latitude</desc>
 			<v:userDefs>
 				<v:ud
    v:nameU="visVersion"
@@ -1097,7 +995,7 @@
 			<path
    d="m 0,578.94 a 48.3621,16.3385 0 0 1 96.72,0 48.3621,16.3385 0 1 1 -96.72,0 z"
    class="st1"
-   id="path256"
+   id="path239"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
 			<text
@@ -1105,49 +1003,49 @@
    y="581.34003"
    class="st2"
    v:langID="2055"
-   id="text258"
+   id="text241"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />Latitude</text>
 		</g>
 		<g
-   id="shape35-108"
+   id="shape35-102"
    v:mID="35"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(680.506,-334.615)">
 			<title
-   id="title261">Dynamischer Verbinder.35</title>
+   id="title244">Dynamischer Verbinder.35</title>
 			<path
    d="m 0,590.67 -33.39,-4.96"
    class="st4"
-   id="path263"
+   id="path246"
    inkscape:connector-curvature="0"
    style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round" />
 		</g>
 		<g
-   id="shape36-111"
+   id="shape36-105"
    v:mID="36"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(695.571,-303.157)">
 			<title
-   id="title266">Dynamischer Verbinder.36</title>
+   id="title249">Dynamischer Verbinder.36</title>
 			<path
    d="M 0,595.28 -69.81,564.17"
    class="st4"
-   id="path268"
+   id="path251"
    inkscape:connector-curvature="0"
    style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round" />
 		</g>
 		<g
-   id="shape37-114"
+   id="shape37-108"
    v:mID="37"
    v:groupContext="shape"
    transform="translate(399.796,-201.515)">
 			<title
-   id="title271">Ellipse.37</title>
+   id="title254">Ellipse.37</title>
 			<desc
-   id="desc273">Success</desc>
+   id="desc256">Erfolg</desc>
 			<v:userDefs>
 				<v:ud
    v:nameU="visVersion"
@@ -1164,43 +1062,43 @@
 			<path
    d="m 0,578.94 a 38.5664,16.3385 0 1 1 77.13,0 38.5664,16.3385 0 1 1 -77.13,0 z"
    class="st1"
-   id="path275"
+   id="path258"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
 			<text
-   x="23.450001"
+   x="28.120001"
    y="581.34003"
    class="st2"
    v:langID="2055"
-   id="text277"
+   id="text260"
    style="fill:#000000;font-family:Arial"><v:paragraph
-   v:horizAlign="1" /><v:tabList />Success</text>
+   v:horizAlign="1" /><v:tabList />Erfolg</text>
 		</g>
 		<g
-   id="shape38-117"
+   id="shape38-111"
    v:mID="38"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(418.657,-231.898)">
 			<title
-   id="title280">Dynamischer Verbinder.38</title>
+   id="title263">Dynamischer Verbinder.38</title>
 			<path
    d="M 0,595.28 -33.76,571.21"
    class="st4"
-   id="path282"
+   id="path265"
    inkscape:connector-curvature="0"
    style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round" />
 		</g>
 		<g
-   id="shape39-120"
+   id="shape39-114"
    v:mID="39"
    v:groupContext="shape"
    v:layerMember="0"
    transform="translate(516.409,-398.275)">
 			<title
-   id="title285">Prozess.39</title>
+   id="title268">Prozess.39</title>
 			<desc
-   id="desc287">Misterx</desc>
+   id="desc270">Misterx</desc>
 			<v:custProps>
 				<v:cp
    v:nameU="Cost"
@@ -1237,27 +1135,27 @@
    width="130.70799"
    height="39.212502"
    class="st1"
-   id="rect289"
+   id="rect272"
    style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
 			<text
    x="52.470001"
    y="578.07001"
    class="st2"
    v:langID="2055"
-   id="text291"
+   id="text274"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />Misterx</text>
 		</g>
 		<g
-   id="shape40-123"
+   id="shape40-117"
    v:mID="40"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(574.676,-398.275)">
 			<title
-   id="title294">Dynamischer Verbinder.40</title>
+   id="title277">Dynamischer Verbinder.40</title>
 			<desc
-   id="desc296">ID</desc>
+   id="desc279">ID</desc>
 			<v:textBlock
    v:margins="rect(4,4,4,4)"
    v:tabSpace="42.5197" />
@@ -1269,9 +1167,9 @@
 			<path
    d="m 7.09,595.28 0,19.27"
    class="st5"
-   id="path298"
+   id="path281"
    inkscape:connector-curvature="0"
-   style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#mrkr4-52)" />
+   style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#mrkr4-46)" />
 			<rect
    v:rectContext="textBkgnd"
    x="3.08655"
@@ -1279,26 +1177,26 @@
    width="7.99997"
    height="9.5998497"
    class="st7"
-   id="rect300"
+   id="rect283"
    style="fill:#ffffff;stroke:none" />
 			<text
    x="3.0899999"
    y="610.07001"
    class="st2"
    v:langID="2055"
-   id="text302"
+   id="text285"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />ID</text>
 		</g>
 		<g
-   id="shape41-130"
+   id="shape41-124"
    v:mID="41"
    v:groupContext="shape"
    transform="translate(669.685,-417.882)">
 			<title
-   id="title305">Ellipse.41</title>
+   id="title288">Ellipse.41</title>
 			<desc
-   id="desc307">Zeitpunkt</desc>
+   id="desc290">Zeitpunkt</desc>
 			<v:userDefs>
 				<v:ud
    v:nameU="visVersion"
@@ -1315,7 +1213,7 @@
 			<path
    d="m 0,578.94 a 38.27,16.339482 0 0 1 76.54,0 38.27,16.339482 0 0 1 -76.54,0 z"
    class="st1"
-   id="path309"
+   id="path292"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
 			<text
@@ -1323,34 +1221,34 @@
    y="581.34003"
    class="st2"
    v:langID="2055"
-   id="text311"
+   id="text294"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />Zeitpunkt</text>
 		</g>
 		<g
-   id="shape42-133"
+   id="shape42-127"
    v:mID="42"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(671.332,-434.998)">
 			<title
-   id="title314">Dynamischer Verbinder.42</title>
+   id="title297">Dynamischer Verbinder.42</title>
 			<path
    d="m 0,600.79 -24.21,3.14"
    class="st4"
-   id="path316"
+   id="path299"
    inkscape:connector-curvature="0"
    style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round" />
 		</g>
 		<g
-   id="shape43-136"
+   id="shape43-130"
    v:mID="43"
    v:groupContext="shape"
    transform="translate(615.984,-449.213)">
 			<title
-   id="title319">Ellipse.43</title>
+   id="title302">Ellipse.43</title>
 			<desc
-   id="desc321">K#</desc>
+   id="desc304">K#</desc>
 			<v:userDefs>
 				<v:ud
    v:nameU="visVersion"
@@ -1367,7 +1265,7 @@
 			<path
    d="m 0,578.94 a 26.1417,16.3385 0 1 1 52.28,0 26.1417,16.3385 0 1 1 -52.28,0 z"
    class="st1"
-   id="path323"
+   id="path306"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
 			<text
@@ -1375,40 +1273,40 @@
    y="581.34003"
    class="st2"
    v:langID="2055"
-   id="text325"
+   id="text308"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />K#</text>
 		</g>
 		<g
-   id="shape44-139"
+   id="shape44-133"
    v:mID="44"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(625.903,-452.74)">
 			<title
-   id="title328">Dynamischer Verbinder.44</title>
+   id="title311">Dynamischer Verbinder.44</title>
 			<path
    d="m 0,595.28 -19.31,15.25"
    class="st4"
-   id="path330"
+   id="path313"
    inkscape:connector-curvature="0"
    style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round" />
 		</g>
 		<g
-   id="group46-142"
+   id="group46-136"
    transform="translate(516.409,-222.777)"
    v:mID="46"
    v:groupContext="group">
 			<title
-   id="title333">Tabelle.46</title>
+   id="title316">Tabelle.46</title>
 			<g
-   id="shape45-143"
+   id="shape45-137"
    v:mID="45"
    v:groupContext="shape"
    v:layerMember="0"
    transform="translate(0,-0.745469)">
 				<title
-   id="title336">Prozess.45</title>
+   id="title319">Prozess.45</title>
 				<v:custProps>
 					<v:cp
    v:nameU="Cost"
@@ -1437,18 +1335,18 @@
    width="130.70799"
    height="52.0471"
    class="st1"
-   id="rect338"
+   id="rect321"
    style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
 			</g>
 			<g
-   id="shape4-145"
+   id="shape4-139"
    v:mID="4"
    v:groupContext="shape"
    v:layerMember="0">
 				<title
-   id="title341">Entscheidung</title>
+   id="title324">Entscheidung</title>
 				<desc
-   id="desc343">Kante</desc>
+   id="desc326">Kante</desc>
 				<v:custProps>
 					<v:cp
    v:nameU="Cost"
@@ -1482,7 +1380,7 @@
 				<path
    d="M 0,568.75 65.35,542.23 130.71,568.75 65.35,595.28 0,568.75 z"
    class="st1"
-   id="path345"
+   id="path328"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
 				<text
@@ -1490,21 +1388,21 @@
    y="571.15002"
    class="st2"
    v:langID="2055"
-   id="text347"
+   id="text330"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />Kante</text>
 			</g>
 		</g>
 		<g
-   id="shape8-148"
+   id="shape8-142"
    v:mID="8"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(516.409,-249.3)">
 			<title
-   id="title350">Dynamischer Verbinder</title>
+   id="title333">Dynamischer Verbinder</title>
 			<desc
-   id="desc352">1</desc>
+   id="desc335">1</desc>
 			<v:textBlock
    v:margins="rect(4,4,4,4)"
    v:tabSpace="42.5197" />
@@ -1516,9 +1414,9 @@
 			<path
    d="M 0,595.28 50.18,514.99"
    class="st5"
-   id="path354"
+   id="path337"
    inkscape:connector-curvature="0"
-   style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#mrkr4-52)" />
+   style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#mrkr4-46)" />
 			<rect
    v:rectContext="textBkgnd"
    x="24.325899"
@@ -1526,27 +1424,27 @@
    width="4.4491901"
    height="9.5998497"
    class="st7"
-   id="rect356"
+   id="rect339"
    style="fill:#ffffff;stroke:none" />
 			<text
    x="24.33"
    y="555.19"
    class="st2"
    v:langID="2055"
-   id="text358"
+   id="text341"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />1</text>
 		</g>
 		<g
-   id="shape9-155"
+   id="shape9-149"
    v:mID="9"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(647.117,-249.3)">
 			<title
-   id="title361">Dynamischer Verbinder.9</title>
+   id="title344">Dynamischer Verbinder.9</title>
 			<desc
-   id="desc363">1</desc>
+   id="desc346">1</desc>
 			<v:textBlock
    v:margins="rect(4,4,4,4)"
    v:tabSpace="42.5197" />
@@ -1558,9 +1456,9 @@
 			<path
    d="M 0,595.28 -50.18,514.99"
    class="st5"
-   id="path365"
+   id="path348"
    inkscape:connector-curvature="0"
-   style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#mrkr4-52)" />
+   style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#mrkr4-46)" />
 			<rect
    v:rectContext="textBkgnd"
    x="-28.7752"
@@ -1568,27 +1466,27 @@
    width="4.4491901"
    height="9.5998497"
    class="st7"
-   id="rect367"
+   id="rect350"
    style="fill:#ffffff;stroke:none" />
 			<text
    x="-28.780001"
    y="555.19"
    class="st2"
    v:langID="2055"
-   id="text369"
+   id="text352"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />1</text>
 		</g>
 		<g
-   id="shape47-162"
+   id="shape47-156"
    v:mID="47"
    v:groupContext="shape"
    v:layerMember="0"
    transform="translate(490.937,-153.513)">
 			<title
-   id="title372">Prozess.47</title>
+   id="title355">Prozess.47</title>
 			<desc
-   id="desc374">Richtungspunkt</desc>
+   id="desc357">Richtungspunkt</desc>
 			<v:custProps>
 				<v:cp
    v:nameU="Cost"
@@ -1625,27 +1523,27 @@
    width="130.70799"
    height="39.212502"
    class="st1"
-   id="rect376"
+   id="rect359"
    style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
 			<text
    x="37.779999"
    y="578.07001"
    class="st2"
    v:langID="2055"
-   id="text378"
+   id="text361"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />Richtungspunkt</text>
 		</g>
 		<g
-   id="shape48-165"
+   id="shape48-159"
    v:mID="48"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(560.871,-192.725)">
 			<title
-   id="title381">Dynamischer Verbinder.48</title>
+   id="title364">Dynamischer Verbinder.48</title>
 			<desc
-   id="desc383">ID</desc>
+   id="desc366">ID</desc>
 			<v:textBlock
    v:margins="rect(4,4,4,4)"
    v:tabSpace="42.5197" />
@@ -1657,9 +1555,9 @@
 			<path
    d="m 1.95,595.28 8.52,-25.56"
    class="st5"
-   id="path385"
+   id="path368"
    inkscape:connector-curvature="0"
-   style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#mrkr4-52)" />
+   style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#mrkr4-46)" />
 			<rect
    v:rectContext="textBkgnd"
    x="3.08655"
@@ -1667,26 +1565,26 @@
    width="7.99997"
    height="9.5998497"
    class="st7"
-   id="rect387"
+   id="rect370"
    style="fill:#ffffff;stroke:none" />
 			<text
    x="3.0899999"
    y="582.28003"
    class="st2"
    v:langID="2055"
-   id="text389"
+   id="text372"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />ID</text>
 		</g>
 		<g
-   id="shape49-172"
+   id="shape49-166"
    v:mID="49"
    v:groupContext="shape"
    transform="translate(650.63,-145.521)">
 			<title
-   id="title392">Ellipse.49</title>
+   id="title375">Ellipse.49</title>
 			<desc
-   id="desc394">K1#</desc>
+   id="desc377">K1#</desc>
 			<v:userDefs>
 				<v:ud
    v:nameU="visVersion"
@@ -1703,7 +1601,7 @@
 			<path
    d="m 0,578.94 a 26.1417,16.3385 0 1 1 52.28,0 26.1417,16.3385 0 1 1 -52.28,0 z"
    class="st1"
-   id="path396"
+   id="path379"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
 			<text
@@ -1711,34 +1609,34 @@
    y="581.34003"
    class="st2"
    v:langID="2055"
-   id="text398"
+   id="text381"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />K1#</text>
 		</g>
 		<g
-   id="shape50-175"
+   id="shape50-169"
    v:mID="50"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(621.645,-172.73)">
 			<title
-   id="title401">Dynamischer Verbinder.50</title>
+   id="title384">Dynamischer Verbinder.50</title>
 			<path
    d="m 0,600.99 29.27,2.74"
    class="st4"
-   id="path403"
+   id="path386"
    inkscape:connector-curvature="0"
    style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round" />
 		</g>
 		<g
-   id="shape51-178"
+   id="shape51-172"
    v:mID="51"
    v:groupContext="shape"
    transform="translate(649.843,-102.972)">
 			<title
-   id="title406">Ellipse.51</title>
+   id="title389">Ellipse.51</title>
 			<desc
-   id="desc408">K1#</desc>
+   id="desc391">K1#</desc>
 			<v:userDefs>
 				<v:ud
    v:nameU="visVersion"
@@ -1755,7 +1653,7 @@
 			<path
    d="m 0,578.94 a 26.1417,16.3385 0 1 1 52.28,0 26.1417,16.3385 0 1 1 -52.28,0 z"
    class="st1"
-   id="path410"
+   id="path393"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
 			<text
@@ -1763,34 +1661,34 @@
    y="581.34003"
    class="st2"
    v:langID="2055"
-   id="text412"
+   id="text395"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />K1#</text>
 		</g>
 		<g
-   id="shape52-181"
+   id="shape52-175"
    v:mID="52"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(599.903,-153.513)">
 			<title
-   id="title415">Dynamischer Verbinder.52</title>
+   id="title398">Dynamischer Verbinder.52</title>
 			<path
    d="m 0,595.28 54.86,24.66"
    class="st4"
-   id="path417"
+   id="path400"
    inkscape:connector-curvature="0"
    style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round" />
 		</g>
 		<g
-   id="shape53-184"
+   id="shape53-178"
    v:mID="53"
    v:groupContext="shape"
    transform="translate(424.024,-100.216)">
 			<title
-   id="title420">Ellipse.53</title>
+   id="title403">Ellipse.53</title>
 			<desc
-   id="desc422">Longitude</desc>
+   id="desc405">Longitude</desc>
 			<v:userDefs>
 				<v:ud
    v:nameU="visVersion"
@@ -1807,7 +1705,7 @@
 			<path
    d="m 0,578.94 a 48.3621,16.3385 0 0 1 96.72,0 48.3621,16.3385 0 1 1 -96.72,0 z"
    class="st1"
-   id="path424"
+   id="path407"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
 			<text
@@ -1815,19 +1713,19 @@
    y="581.34003"
    class="st2"
    v:langID="2055"
-   id="text426"
+   id="text409"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />Longitude</text>
 		</g>
 		<g
-   id="shape54-187"
+   id="shape54-181"
    v:mID="54"
    v:groupContext="shape"
    transform="translate(533.456,-100.216)">
 			<title
-   id="title429">Ellipse.54</title>
+   id="title412">Ellipse.54</title>
 			<desc
-   id="desc431">Latitude</desc>
+   id="desc414">Latitude</desc>
 			<v:userDefs>
 				<v:ud
    v:nameU="visVersion"
@@ -1844,7 +1742,7 @@
 			<path
    d="m 0,578.94 a 48.3621,16.3385 0 0 1 96.72,0 48.3621,16.3385 0 1 1 -96.72,0 z"
    class="st1"
-   id="path433"
+   id="path416"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
 			<text
@@ -1852,49 +1750,49 @@
    y="581.34003"
    class="st2"
    v:langID="2055"
-   id="text435"
+   id="text418"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />Latitude</text>
 		</g>
 		<g
-   id="shape55-190"
+   id="shape55-184"
    v:mID="55"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(494.053,-131.161)">
 			<title
-   id="title438">Dynamischer Verbinder.55</title>
+   id="title421">Dynamischer Verbinder.55</title>
 			<path
    d="M 0,595.28 33.16,572.92"
    class="st4"
-   id="path440"
+   id="path423"
    inkscape:connector-curvature="0"
    style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round" />
 		</g>
 		<g
-   id="shape56-193"
+   id="shape56-187"
    v:mID="56"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(576.921,-132.706)">
 			<title
-   id="title443">Dynamischer Verbinder.56</title>
+   id="title426">Dynamischer Verbinder.56</title>
 			<path
    d="m -2.39,595.28 -9.39,-20.81"
    class="st4"
-   id="path445"
+   id="path428"
    inkscape:connector-curvature="0"
    style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round" />
 		</g>
 		<g
-   id="shape57-196"
+   id="shape57-190"
    v:mID="57"
    v:groupContext="shape"
    transform="translate(417.402,-139.901)">
 			<title
-   id="title448">Ellipse.57</title>
+   id="title431">Ellipse.57</title>
 			<desc
-   id="desc450">Nummer</desc>
+   id="desc433">Nummer</desc>
 			<v:userDefs>
 				<v:ud
    v:nameU="visVersion"
@@ -1911,7 +1809,7 @@
 			<path
    d="m 0,578.94 a 26.1417,16.3385 0 1 1 52.28,0 26.1417,16.3385 0 1 1 -52.28,0 z"
    class="st1"
-   id="path452"
+   id="path435"
    inkscape:connector-curvature="0"
    style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
 			<text
@@ -1919,24 +1817,124 @@
    y="581.34003"
    class="st2"
    v:langID="2055"
-   id="text454"
+   id="text437"
    style="fill:#000000;font-family:Arial"><v:paragraph
    v:horizAlign="1" /><v:tabList />Nummer</text>
 		</g>
 		<g
-   id="shape58-199"
+   id="shape58-193"
    v:mID="58"
    v:groupContext="shape"
    v:layerMember="1"
    transform="translate(490.937,-168.777)">
 			<title
-   id="title457">Dynamischer Verbinder.58</title>
+   id="title440">Dynamischer Verbinder.58</title>
 			<path
    d="m 0,600.72 -21.97,3.29"
    class="st4"
-   id="path459"
+   id="path442"
    inkscape:connector-curvature="0"
    style="stroke:#000000;stroke-width:0.239976;stroke-linecap:round;stroke-linejoin:round" />
+		</g>
+		<g
+   id="group7-196"
+   transform="translate(312.944,-339.831)"
+   v:mID="7"
+   v:groupContext="group">
+			<title
+   id="title445">Tabelle.7</title>
+			<g
+   id="shape6-197"
+   v:mID="6"
+   v:groupContext="shape"
+   v:layerMember="0">
+				<title
+   id="title448">Prozess.6</title>
+				<v:custProps>
+					<v:cp
+   v:nameU="Cost"
+   v:lbl="Kosten"
+   v:type="7"
+   v:format="@"
+   v:langID="1031" />
+					<v:cp
+   v:nameU="Duration"
+   v:lbl="Dauer"
+   v:type="2"
+   v:langID="1031" />
+					<v:cp
+   v:nameU="Resources"
+   v:lbl="Ressourcen"
+   v:langID="1031" />
+				</v:custProps>
+				<v:userDefs>
+					<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				</v:userDefs>
+				<rect
+   x="0"
+   y="542.22998"
+   width="130.70799"
+   height="53.045799"
+   class="st1"
+   id="rect450"
+   style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
+			</g>
+			<g
+   id="shape5-199"
+   v:mID="5"
+   v:groupContext="shape"
+   v:layerMember="0">
+				<title
+   id="title453">Entscheidung.5</title>
+				<desc
+   id="desc455">SpielerPosition</desc>
+				<v:custProps>
+					<v:cp
+   v:nameU="Cost"
+   v:lbl="Kosten"
+   v:type="7"
+   v:format="@"
+   v:langID="1031" />
+					<v:cp
+   v:nameU="Duration"
+   v:lbl="Dauer"
+   v:type="2"
+   v:langID="1031" />
+					<v:cp
+   v:nameU="Resources"
+   v:lbl="Ressourcen"
+   v:langID="1031" />
+				</v:custProps>
+				<v:userDefs>
+					<v:ud
+   v:nameU="visVersion"
+   v:val="VT0(12):26" />
+				</v:userDefs>
+				<v:textBlock
+   v:margins="rect(2,2,2,2)"
+   v:tabSpace="42.5197" />
+				<v:textRect
+   cx="65.3542"
+   cy="568.753"
+   width="108.93"
+   height="39.7844" />
+				<path
+   d="M 0,568.75 65.35,542.23 130.71,568.75 65.35,595.28 0,568.75 z"
+   class="st1"
+   id="path457"
+   inkscape:connector-curvature="0"
+   style="fill:#ffffff;stroke:#000000;stroke-width:0.23999999;stroke-linecap:round;stroke-linejoin:round" />
+				<text
+   x="38.669998"
+   y="571.15002"
+   class="st2"
+   v:langID="2055"
+   id="text459"
+   style="fill:#000000;font-family:Arial"><v:paragraph
+   v:horizAlign="1" /><v:tabList />SpielerPosition</text>
+			</g>
 		</g>
 	</g>
 </svg>
