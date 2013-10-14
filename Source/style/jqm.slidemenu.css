@@ -92,21 +92,3 @@
 	width: 30px;
 }
 
-/* THESE ARE JUST EXAMPLE STYLES BELOW */
-
-#profile {
-	background-color:#32394A;
-	border-bottom: 1px solid #242A37;
-	overflow: hidden;
-	height: 58px;
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-.profile_info {
-	position: relative;
-	left: 68px;
-	top:-49px;
-	font-size: 14px;
-	color: #C4CCDA;
-	text-shadow: 0 0px 0 black;
-}

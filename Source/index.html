@@ -14,8 +14,8 @@
 
 		<!-- Include JQM, Theme and JQ -->
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
-		<link rel="stylesheet" href="style/themes/yard-theme.min.css" />
 	    <link rel="stylesheet" href="style/themes/jqmfb.min.css" />
+		<link rel="stylesheet" href="style/themes/yard-theme.min.css" />
 
 		<script type="text/javascript" src="script/jquery.animate-enhanced.min.js"></script>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
@@ -36,6 +36,7 @@
 
 		<!-- Other Includes -->
 		<script type="text/javascript" src="script/map.js"></script>
+		<link rel="stylesheet" type="text/css" href="http://www.google.com/fonts#UsePlace:use/Collection:Rokkitt:400,700">
 
 		<link rel="stylesheet" href="style/style.css" />
 
@@ -47,15 +48,10 @@
 		<!-- Slidemenu -->
 		<div id="slidemenu">
 
-		<div id="profile">
-			<img src="img/tegan.jpg">
-			<div class="profile_info"><strong>Tegan Snyder</strong><br><small>Web &amp; Mobile Developer</small></div>
-		</div>
-
 		<h3>MENU</h3>
 
 		<ul>
-			<li><a href="#main_page"><img src="img/smico3.png">Home</a></li>
+			<li><a href="#card_page"><img src="img/smico3.png">Home</a></li>
 			<li><a href="#another_page"><img src="img/smico2.png">Tegan Snyder</a></li>
 			<li><a href="#another_page2"><img src="img/smico5.png">Invite Friends</a></li>
 			<li><a href="#another_page3"><img src="img/smico6.png">Settings</a></li>
@@ -64,9 +60,10 @@
 
 	</div>
 		
-		<!-- Slidemenue End -->
+		<!-- Slidemenue - End -->
 
-		<div data-role="page" id="page">
+		<!-- Card Page -->
+		<div data-role="page" id="card_page" data-theme="a">
 
 			<div data-role="header">
 				<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false" data-iconpos="notext">Menu</a>
@@ -81,6 +78,22 @@
 				<input type="button" value="MisterX fangen" id="btnCatchMisterX" />
 			</div>
 		</div>
+		<!-- Card Page - End -->
+		
+		<!-- Another Page -->
+		<div data-role="page" id="another_page" data-theme="a">
+
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
+				<a href="#" data-slidemenu="#slidemenu" data-slideopen="false" data-icon="smico" data-corners="false" data-iconpos="notext">Menu</a>
+				<h1>Slide Menu</h1>
+			</div>
+
+			<div data-role="content">
+				<h2>This is an example of another page loaded</h2>
+				<p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.</p>
+			</div>
+		</div>
+		<!-- Another Page - End -->
 
 	</body>
 </html>
