@@ -13,6 +13,33 @@ var yard = {
 
 		map.addLayer(layer);
 	},
+	drawGraph : function() {
+		$.ajax({
+				type : 'GET',
+				//contentType : 'application/json',
+				contentType: "text/json",
+				url : "/api/server.php/graph",
+				dataType : "json",
+				success : function(data, textStatus, jqXHR) {
+					console.log(data);
+
+					for (var i=0; i < data.nodes.length; i++) {
+					  yard.drawNode(data.nodes[i].longitude,  data.nodes[i].latitude);
+					};
+
+					for (var i=0; i < data.lines.length; i++) {
+					  yard.drawLine(data.lines[i].longitudeFrom,  data.lines[i].latitudeFrom, data.lines[i].longitudeTo,  data.lines[i].latitudeTo);
+					};
+	
+				},
+				error : function(jqXHR, textStatus, errorThrown) {
+					console.log(textStatus);
+					console.log(errorThrown);
+				}
+			});
+	
+		
+	},
 	markUserLocation : function() {
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(function(position) {
@@ -59,7 +86,13 @@ var yard = {
 			fillOpacity : 0.3
 		}).addTo(map);
 	},
+	drawLine : function(latFrom, longFrom, latTo, longTo){
+		 var from = new L.LatLng(latFrom, longFrom);
+		 var to = new L.LatLng(latTo, longTo);
+		 yard.drawPolyLine([from, to]);
+	},
 	drawPolyLine : function(pointList) {
+		console.log("hier");
 		var polyline = new L.Polyline(pointList, {
 			color : 'blue',
 			weight : 3,
@@ -75,18 +108,8 @@ var yard = {
 $(document).ready(function() {
 
 	yard.initMap();
-	yard.markUserLocation();
-	yard.drawNode(47.499344, 8.726432);
-	var pointA = new L.LatLng(47.499344, 8.726432);
-	var pointB = new L.LatLng(47.498608, 8.726545);
-	var pointC = new L.LatLng(47.499304, 8.725874);
-
-	var pointList = [pointA, pointB, pointC, pointA];
-	yard.drawPolyLine(pointList);
-
-	yard.drawNode(47.498608, 8.726545);
-	yard.drawNode(47.499304, 8.725874);
-
+	yard.drawGraph();
+	// yard.markUserLocation();
 	$("#btnCatchMisterX").click(yard.catchMisterX);
 
 });
