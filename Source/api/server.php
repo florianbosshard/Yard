@@ -1,14 +1,34 @@
 <?php
+require "connect.php";
+
 require '../lib/Slim/Slim.php';
 \Slim\Slim::registerAutoloader();
 
 $app = new \Slim\Slim();
 
+$con=mysql_connect("localhost",$username,$passwort,$db);
+mysql_select_db($db);
+
+// Check connection
+if (mysqli_connect_errno($con))
+{
+	echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
 
 
 $app->get('/graph/', function() {
+	
 	$nodeArray = array();
-	$nodeArray[] = array("longitude" => "47.499344", "latitude" => "8.726432");
+	
+	$result = mysql_query("SELECT Longitude, Latitude FROM Knoten");
+
+	echo mysql_error();
+
+	while($row = mysql_fetch_array($result))
+	{
+		$nodeArray[] = array("longitude" => $row["Longitude"], "latitude" => $row["Latitude"]);
+	
+	}
 	
 	$lineArray = array();
 	$lineArray[] = array( "longitudeFrom" => "47.499344", "latitudeFrom" => "8.726432", "longitudeTo" => "47.498608", "latitudeTo" => "8.726545" );
