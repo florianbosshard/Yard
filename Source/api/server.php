@@ -20,13 +20,13 @@ $app->get('/graph/', function() {
 	
 	$nodeArray = array();
 	
-	$result = mysql_query("SELECT Longitude, Latitude FROM Knoten");
+	$result = mysql_query("SELECT Id, Longitude, Latitude FROM Knoten");
 
 	echo mysql_error();
 
 	while($row = mysql_fetch_array($result))
 	{
-		$nodeArray[] = array("longitude" => $row["Longitude"], "latitude" => $row["Latitude"]);
+		$nodeArray[] = array("Id" => $row["Id"],"longitude" => $row["Longitude"], "latitude" => $row["Latitude"]);
 	
 	}
 	

@@ -28,7 +28,7 @@ var yard = {
 					console.log(data);
 
 					for (var i=0; i < data.nodes.length; i++) {
-					  yard.drawNode(data.nodes[i].longitude,  data.nodes[i].latitude);
+					  yard.drawNode(data.nodes[i].longitude,  data.nodes[i].latitude, data.nodes[i].Id );
 					};
 
 					for (var i=0; i < data.lines.length; i++) {
@@ -83,12 +83,16 @@ var yard = {
 		// show resultmessage
 
 	},
-	drawNode : function(lat, lon) {
+	drawNode : function(lat, lon, id) {
 		var circle = L.circle([lat, lon], 7, {
 			color : 'blue',
 			fillColor : 'blue',
 			fillOpacity : 0.3
 		}).addTo(map);
+		
+		L.marker([lat, lon]).addTo(map)
+    .bindPopup('Id:'+ id)
+    .openPopup();
 	},
 	drawLine : function(latFrom, longFrom, latTo, longTo){
 		 var from = new L.LatLng(latFrom, longFrom);
