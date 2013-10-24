@@ -12,6 +12,10 @@ var yard = {
 		var tileUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', layer = new L.TileLayer(tileUrl);
 
 		map.addLayer(layer);
+		
+		map.on('click', function(e) {
+   		 	console.log("Lat, Lon : " + e.latlng.lat + ", " + e.latlng.lng);
+		});
 	},
 	drawGraph : function() {
 		$.ajax({
@@ -92,7 +96,6 @@ var yard = {
 		 yard.drawPolyLine([from, to]);
 	},
 	drawPolyLine : function(pointList) {
-		console.log("hier");
 		var polyline = new L.Polyline(pointList, {
 			color : 'blue',
 			weight : 3,
