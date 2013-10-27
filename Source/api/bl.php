@@ -76,17 +76,22 @@ function catchMisterX($userId, $latitude, $longitude){
 	
 	
 	$knoten = mysql_fetch_array($result);
-	// Prüfe ob an diesem Ort Mister X ist
-	$result = mysql_query("SELECT m.KnotenId, m.Zeitpunkt FROM Misterx m JOIN Knoten k ON  m.KnotenId = k.Id ORDER BY m.Zeitpunkt DESC LIMIT 5");
+	// Hole die letzten standorte von Mister X
+	$result = mysql_query("SELECT m.KnotenId, m.Zeitpunkt, k.Latitude, k.Longitude FROM Misterx m JOIN Knoten k ON  m.KnotenId = k.Id ORDER BY m.Zeitpunkt DESC LIMIT 2");
 	echo mysql_error();
 	
 	$misterxPos = mysql_fetch_array($result);
+	// erste Position von Mister X stimmt mit der Position des Benutzers überein => gefunden
 	if($misterxPos['KnotenId'] == $knoten['Id']){
 		die(json_encode(array("message"=> "Gratulation - du hast MisterX erwischt.")));	
 	}
 	
+	// Gebe aus, wo sich Mister X als letztes aufgehalten hat
+	$misterxLastPos = mysql_fetch_array($result);
 	
-	die(json_encode(array("message"=> "Da ist Mister X nicht... ")));
+	
+	
+	die(json_encode(array("message"=> "Da ist Mister X nicht... ", "MisterXLast" => array("latitude" => $misterxLastPos['Latitude'], "longitude" => $misterxLastPos['Longitude'] ))));
 	
 }
 

@@ -25,8 +25,6 @@ var yard = {
 			url : "/api/server.php/graph",
 			dataType : "json",
 			success : function(data, textStatus, jqXHR) {
-				console.log(data);
-
 				for (var i = 0; i < data.nodes.length; i++) {
 					yard.drawNode(data.nodes[i].longitude, data.nodes[i].latitude, data.nodes[i].Id);
 				};
@@ -70,7 +68,7 @@ var yard = {
 						"longitude" : position.coords.longitude
 					}),
 					success : function(data, textStatus, jqXHR) {
-
+						console.log(data);
 						$("#notFound").popup();
 						$("#notFound").popup("open");
 						$("#message").text(data.message);
@@ -87,10 +85,6 @@ var yard = {
 		} else {
 			alert("navigator.geolocation ist ausgeschaltet");
 		}
-
-		// show sanduhr
-
-		// show resultmessage
 
 	},
 	drawNode : function(lat, lon, id) {
