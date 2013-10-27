@@ -58,4 +58,10 @@ function addNewPlayer($name) {
 
 	echo "Neuer Spieler hinzugefuegt";
 }
+
+function catchMisterX($userId, $longitude, $latitude){
+	echo json_encode(array("message"=> "Sorry - leider nicht gefunden!"));
+	
+}
+
 ?>

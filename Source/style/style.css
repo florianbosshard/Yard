@@ -16,5 +16,11 @@
 	
 }
 
+#notFound {
+	height: 200px;
+	width: 200px;
+	padding: 5px;
+}
+
 [data-role=page]{height: 100% !important; position:relative !important;}
 [data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;}

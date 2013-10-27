@@ -59,18 +59,22 @@ var yard = {
 	catchMisterX : function() {
 		// send current position to server
 		$.ajax({
-			type : 'PUT',
-			//contentType : 'application/json',
+			type : 'POST',
 			contentType: "text/json",
-			url : "/api/",
+			url : "/api/server.php/anfrage/",
 			dataType : "json",
 			data : JSON.stringify({
-				"position" : userLocation,
-				"username": "Gewinnertyp"
+				"userid" : "1",
+				"longitude": "123",
+				"latitude": "456"
 			}),
 			success : function(data, textStatus, jqXHR) {
-				console.log(data);
-				alert(data.message);
+				
+				$( "#notFound" ).popup( );				
+				$( "#notFound" ).popup("open" );
+				$("#message").text(data.message);
+
+				
 
 			},
 			error : function(jqXHR, textStatus, errorThrown) {
