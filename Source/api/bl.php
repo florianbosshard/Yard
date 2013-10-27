@@ -3,12 +3,16 @@
 
 require 'connect.php';
 
-$con = mysql_connect("localhost", $username, $passwort, $db);
-mysql_select_db($db);
+$con = mysql_connect("localhost", $username, $passwort);
+if(!$con){
+	die("Konnte die Datenbank nicht öffnen. Fehlermeldung: ". mysql_error());
+}
 
-// Check connection
-if (mysqli_connect_errno($con)) {
-	echo "Failed to connect to MySQL: " . mysqli_connect_error();
+
+$dbCon = mysql_select_db($db, $con);
+
+if(!$dbCon){
+	die("Datenbank nicht geöffnet. Fehlermeldung: ". mysql_error());
 }
 
 function getGraph() {
