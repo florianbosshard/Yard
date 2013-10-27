@@ -59,8 +59,34 @@ function addNewPlayer($name) {
 	echo "Neuer Spieler hinzugefuegt";
 }
 
-function catchMisterX($userId, $longitude, $latitude){
-	echo json_encode(array("message"=> "Sorry - leider nicht gefunden!"));
+function catchMisterX($userId, $latitude, $longitude){
+	// Finde heraus, bei welchem Knoten der Benutzer steht
+	
+	$query = "SELECT Id FROM  Knoten WHERE Longitude BETWEEN ". ($longitude - 0.000100). " AND ".  ($longitude + 0.000100) ." AND Latitude BETWEEN ". ($latitude - 0.000100). " AND ".  ($latitude + 0.000100) ;
+
+	$result = mysql_query($query );
+	echo mysql_error();
+	
+	if(mysql_num_rows($result) == 0){
+		die(json_encode(array("message"=> "Du konntest keinem Punkt zugeordnet werden.". $query)));	
+	} 
+	if(mysql_num_rows($result) > 1){
+		die(json_encode(array("message"=> "Keine eindeutige Zuordnung möglich.")));	
+	} 
+	
+	
+	$knoten = mysql_fetch_array($result);
+	// Prüfe ob an diesem Ort Mister X ist
+	$result = mysql_query("SELECT m.KnotenId, m.Zeitpunkt FROM Misterx m JOIN Knoten k ON  m.KnotenId = k.Id ORDER BY m.Zeitpunkt DESC LIMIT 5");
+	echo mysql_error();
+	
+	$misterxPos = mysql_fetch_array($result);
+	if($misterxPos['KnotenId'] == $knoten['Id']){
+		die(json_encode(array("message"=> "Gratulation - du hast MisterX erwischt.")));	
+	}
+	
+	
+	die(json_encode(array("message"=> "Da ist Mister X nicht... ")));
 	
 }
 

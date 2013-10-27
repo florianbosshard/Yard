@@ -12,37 +12,36 @@ var yard = {
 		var tileUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', layer = new L.TileLayer(tileUrl);
 
 		map.addLayer(layer);
-		
+
 		map.on('click', function(e) {
-   		 	console.log("Lat, Lon : " + e.latlng.lat + ", " + e.latlng.lng);
+			console.log("Lat, Lon : " + e.latlng.lat + ", " + e.latlng.lng);
 		});
 	},
 	drawGraph : function() {
 		$.ajax({
-				type : 'GET',
-				//contentType : 'application/json',
-				contentType: "text/json",
-				url : "/api/server.php/graph",
-				dataType : "json",
-				success : function(data, textStatus, jqXHR) {
-					console.log(data);
+			type : 'GET',
+			//contentType : 'application/json',
+			contentType : "text/json",
+			url : "/api/server.php/graph",
+			dataType : "json",
+			success : function(data, textStatus, jqXHR) {
+				console.log(data);
 
-					for (var i=0; i < data.nodes.length; i++) {
-					  yard.drawNode(data.nodes[i].longitude,  data.nodes[i].latitude, data.nodes[i].Id );
-					};
+				for (var i = 0; i < data.nodes.length; i++) {
+					yard.drawNode(data.nodes[i].longitude, data.nodes[i].latitude, data.nodes[i].Id);
+				};
 
-					for (var i=0; i < data.lines.length; i++) {
-					  yard.drawLine(data.lines[i].longitudeFrom,  data.lines[i].latitudeFrom, data.lines[i].longitudeTo,  data.lines[i].latitudeTo);
-					};
-	
-				},
-				error : function(jqXHR, textStatus, errorThrown) {
-					console.log(textStatus);
-					console.log(errorThrown);
-				}
-			});
-	
-		
+				for (var i = 0; i < data.lines.length; i++) {
+					yard.drawLine(data.lines[i].longitudeFrom, data.lines[i].latitudeFrom, data.lines[i].longitudeTo, data.lines[i].latitudeTo);
+				};
+
+			},
+			error : function(jqXHR, textStatus, errorThrown) {
+				console.log(textStatus);
+				console.log(errorThrown);
+			}
+		});
+
 	},
 	markUserLocation : function() {
 		if (navigator.geolocation) {
@@ -57,31 +56,38 @@ var yard = {
 		}
 	},
 	catchMisterX : function() {
-		// send current position to server
-		$.ajax({
-			type : 'POST',
-			contentType: "text/json",
-			url : "/api/server.php/anfrage/",
-			dataType : "json",
-			data : JSON.stringify({
-				"userid" : "1",
-				"longitude": "123",
-				"latitude": "456"
-			}),
-			success : function(data, textStatus, jqXHR) {
-				
-				$( "#notFound" ).popup( );				
-				$( "#notFound" ).popup("open" );
-				$("#message").text(data.message);
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(function(position) {
+				// send current position to server
+				$.ajax({
+					type : 'POST',
+					contentType : "text/json",
+					url : "/api/server.php/anfrage/",
+					dataType : "json",
+					data : JSON.stringify({
+						"userid" : "1",
+						"latitude" : position.coords.latitude,
+						"longitude" : position.coords.longitude
+					}),
+					success : function(data, textStatus, jqXHR) {
 
-				
+						$("#notFound").popup();
+						$("#notFound").popup("open");
+						$("#message").text(data.message);
 
-			},
-			error : function(jqXHR, textStatus, errorThrown) {
-				console.log(textStatus);
-				console.log(errorThrown);
-			}
-		});
+					},
+					error : function(jqXHR, textStatus, errorThrown) {
+						console.log(textStatus);
+						console.log(errorThrown);
+					}
+				});
+			}, function(error) {
+				alert(error);
+			});
+		} else {
+			alert("navigator.geolocation ist ausgeschaltet");
+		}
+
 		// show sanduhr
 
 		// show resultmessage
@@ -93,15 +99,13 @@ var yard = {
 			fillColor : 'blue',
 			fillOpacity : 0.3
 		}).addTo(map);
-		
-		L.marker([lat, lon]).addTo(map)
-    .bindPopup('Id:'+ id)
-    .openPopup();
+
+		L.marker([lat, lon]).addTo(map).bindPopup('Id:' + id).openPopup();
 	},
-	drawLine : function(latFrom, longFrom, latTo, longTo){
-		 var from = new L.LatLng(latFrom, longFrom);
-		 var to = new L.LatLng(latTo, longTo);
-		 yard.drawPolyLine([from, to]);
+	drawLine : function(latFrom, longFrom, latTo, longTo) {
+		var from = new L.LatLng(latFrom, longFrom);
+		var to = new L.LatLng(latTo, longTo);
+		yard.drawPolyLine([from, to]);
 	},
 	drawPolyLine : function(pointList) {
 		var polyline = new L.Polyline(pointList, {
