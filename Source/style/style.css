@@ -36,6 +36,10 @@ body {
 	background-repeat: repeat;
 }
 
+h1 {
+	color: #FFEC8B
+}
+
 .ui-input-text {
 	background-color: #f2f2f2
 	
