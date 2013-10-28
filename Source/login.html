@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Winterthur Yard</title>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320"/>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta http-equiv="cleartype" content="on">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+		<!-- Include JQM, Theme and JQ -->
+		
+		<link rel="stylesheet" href="style/themes/yard-theme.css" />
+  		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile.structure-1.3.2.min.css" /> 
+  		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> 
+ 		<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script> 
+ 		 
+		<!-- Leaflet -->
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+		<!--[if lte IE 8]>
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
+		<![endif]-->
+		<script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+
+		<!-- Other Includes -->
+		<script type="text/javascript" src="script/map.js"></script>
+		<link rel="stylesheet" type="text/css" href="http://www.google.com/fonts#UsePlace:use/Collection:Rokkitt:400,700">
+
+		<link rel="stylesheet" href="style/style.css" />
+	</head>
+
+	<body>
+		<div style="min-height: 808px;" class="ui-page ui-page-theme-a ui-page-active" tabindex="0"  data-role="page">
+		
+			<div role="main" class="ui-content">
+				<img id="frontImage" src="images/yardLogo.png" alt="yardLogo" class="bigImage"/>
+				<form id="login-form" method="post" action="">
+					<input name="name" id="name" placeholder="- Ihr Name -" value="" type="text">
+					<input value="Finde MisterX" data-theme="a" type="submit">
+				</form>
+			</div>
+			<!-- /content -->
+			
+		</div>
+		<!-- /page -->
+		<div class="ui-loader ui-corner-all ui-body-a ui-loader-default">
+			<span class="ui-icon-loading"> </span>
+			<h1> loading </h1>
+		</div>
+	</body>
+</html>

@@ -24,3 +24,44 @@
 
 [data-role=page]{height: 100% !important; position:relative !important;}
 [data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;}
+
+
+
+/*////////////////////////////////////////////////////////////////
+///////// allgemeine Styles  ///////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////*/
+body {
+	background-image: url(themes/images/background.jpg);
+	background-color: black;
+	background-repeat: repeat;
+}
+
+.ui-input-text {
+	background-color: #f2f2f2
+	
+}
+
+.bigImage {
+	max-width: 50%;
+	height: auto;
+}
+
+
+
+
+
+/*///////////////////////////////////////////////////////////////
+/////////// Login Page /////////////////////////////////////////
+///////////////////////////////////////////////////////////////*/
+
+#frontImage {
+	margin: 14.28% auto 10% 24%;
+	
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+	color: #333333;
+}
+
+
+
