@@ -1,5 +1,6 @@
 <?php
 //File für Businesslogik
+session_start();
 
 require 'connect.php';
 
@@ -54,13 +55,17 @@ function getGraph() {
 }
 
 function addNewPlayer($name) {
-	mysql_query("INSERT INTO Spieler (Name) VALUES('$playername') ") or die(mysql_error());
+	mysql_query("INSERT INTO Spieler (Name) VALUES('$name') ") or die(mysql_error());
 
-	echo "Neuer Spieler hinzugefuegt";
+	$_SESSION['name'] = $name;
+	$_SESSION['userId'] = 1;
+
+	echo json_encode(array("message" => "Neuer Spieler hinzugefuegt"));
 }
 
 function catchMisterX($userId, $latitude, $longitude){
 	// Finde heraus, bei welchem Knoten der Benutzer steht
+	
 	
 	$query = "SELECT Id FROM  Knoten WHERE Longitude BETWEEN ". ($longitude - 0.000100). " AND ".  ($longitude + 0.000100) ." AND Latitude BETWEEN ". ($latitude - 0.000100). " AND ".  ($latitude + 0.000100) ;
 
