@@ -15,7 +15,7 @@ var login = {
 				success : function(data, textStatus, jqXHR) {
 					console.log(data);
 					
-					window.location.href = "index.html";
+					window.location.href = "game.html";
 
 				},
 				error : function(jqXHR, textStatus, errorThrown) {

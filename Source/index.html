@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
+		<meta charset="utf-8">
+
 		<title>Winterthur Yard</title>
 
 		<meta charset="utf-8">
@@ -13,57 +15,28 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 
 		<!-- Include JQM, Theme and JQ -->
-		<!--<link rel="stylesheet" href="style/themes/yard-theme.min.css" />-->
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
-
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-		<script type="text/javascript" src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
-
-		<!-- Leaflet -->
-		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
-		<!--[if lte IE 8]>
-		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
-		<![endif]-->
-		<script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+		
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" /> 
+  		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> 
+ 		<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script> 
+ 		 
 
 		<!-- Other Includes -->
-		<script type="text/javascript" src="script/map.js"></script>
+		<script type="text/javascript" src="script/login.js"></script>
 		<link rel="stylesheet" type="text/css" href="http://www.google.com/fonts#UsePlace:use/Collection:Rokkitt:400,700">
 
 		<link rel="stylesheet" href="style/style.css" />
-
 	</head>
+
 	<body>
-
-
-
-
-		<!-- Card Page -->
-		<div data-role="page" id="card_page" data-theme="c">
-
-
-			<div data-role="header" id="header">
-				<h1>Winterthur Yard</h1>
+		<div data-role="page">
+		
+			<div role="main" class="ui-content">
+				<img id="frontImage" src="images/yardLogo.png" alt="yardLogo" class="bigImage"/>
+				<input name="name" id="name" placeholder="- Ihr Name -" value="" type="text">
+				<input value="Finde MisterX" data-theme="a" type="submit" id="btnSend">
 			</div>
-
-			<div data-role="content" id="content">
-				<div id="map"></div>
-
-				<div id="catchButtonDiv">
-					<input type="button" value="Catch Me!" id="btnCatchMisterX" />
-				</div>
-			</div>
-
-			<div id="messagePopup" data-role="popup">
-				<span id="message"></span>
-				<a href="#" data-rel="back" data-role="button">Schliessen</a>	
-
-			</div>​
 			
 		</div>
-		<!-- Card Page - End -->
-
-
-
 	</body>
 </html>
