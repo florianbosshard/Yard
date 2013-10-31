@@ -24,6 +24,17 @@
   	width: auto;
   	height: auto;
   }
+  #catchButtonDiv {
+  	position: absolute; 
+  	bottom: 13px; 
+  	right: 13px;
+  	width: 120px;
+  }
+  
+  #catchButtonDiv input {
+  	background-color: #72aab4;
+  }
+  
   body {
   	overflow: hidden;
   }
@@ -52,11 +63,11 @@ body {
 }
 
 h1 {
-	color: #FFEC8B
+	color: #FFEC8B;
 }
 
 .ui-input-text {
-	background-color: #f2f2f2
+	background-color: #f2f2f2;
 	
 }
 
