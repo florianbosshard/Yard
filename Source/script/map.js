@@ -114,11 +114,13 @@ var yard = {
 	}
 };
 
+
+
 $(document).ready(function() {
 
 	yard.initMap();
 	yard.drawGraph();
-	// yard.markUserLocation();
 	$("#btnCatchMisterX").click(yard.catchMisterX);
+	
 
 });
