@@ -32,6 +32,7 @@ function anfrage() {
     $body = $request->getBody();
     $requestData = json_decode($body);
 	
+	moveMisterX();
 	catchMisterX($requestData->userid, $requestData->longitude, $requestData->latitude);
 	
 }
