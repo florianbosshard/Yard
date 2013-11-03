@@ -69,8 +69,8 @@ var yard = {
 					}),
 					success : function(data, textStatus, jqXHR) {
 						console.log(data);
-						$("#notFound").popup();
-						$("#notFound").popup("open");
+						$("#messagePopup").popup();
+						$("#messagePopup").popup("open");
 						$("#message").text(data.message);
 
 					},
@@ -114,11 +114,13 @@ var yard = {
 	}
 };
 
+
+
 $(document).ready(function() {
 
 	yard.initMap();
 	yard.drawGraph();
-	// yard.markUserLocation();
 	$("#btnCatchMisterX").click(yard.catchMisterX);
+	
 
 });

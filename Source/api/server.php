@@ -15,11 +15,16 @@ $app->get('/graph/', function() {
 	getGraph();
 });
 
-$app->post('/player/:name', function ($name) {
-    addNewPlayer($name);
-});
-
+$app->post('/login/', 'login');
 $app->post('/anfrage/', 'anfrage' );
+
+function login() {
+	$request = \Slim\Slim::getInstance()->request();
+    $body = $request->getBody();
+    $requestData = json_decode($body);
+	
+    addNewPlayer($requestData->name);
+}
 
 
 function anfrage() {
