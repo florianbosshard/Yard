@@ -72,8 +72,9 @@ h1 {
 }
 
 .bigImage {
-	max-width: 50%;
+	max-width: 80%;
 	height: auto;
+	display: block;
 }
 
 
@@ -85,7 +86,7 @@ h1 {
 ///////////////////////////////////////////////////////////////*/
 
 #frontImage {
-	margin: 14.28% auto 10% 24%;
+	margin: 14.28% auto 10% auto;
 	
 }
 
