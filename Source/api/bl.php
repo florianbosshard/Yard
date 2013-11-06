@@ -100,4 +100,56 @@ function catchMisterX($userId, $latitude, $longitude){
 	
 }
 
+function moveMisterX()
+{
+	//Letzte Position von MisterX lesen
+	$result = mysql_query("SELECT KnotenId, UNIX_TIMESTAMP( Zeitpunkt ) as Zeitpunkt FROM Misterx ORDER BY Zeitpunkt DESC") or die(mysql_error());
+	$row = mysql_fetch_array($result);
+	
+	//Anzahl Züge berechnen	
+	$lastTimeMoved = $row['Zeitpunkt'];
+	$timediffInMinutes = (time()-$lastTimeMoved)/60;
+	$numOfSteps = floor($timediffInMinutes);
+	
+	//Maximal 10 Schritte
+	$numOfSteps = ($numOfSteps>10) ? 10 : $numOfSteps ;
+	
+	
+	$node = $row['KnotenId'];
+	for($i=0;$i<$numOfSteps;$i++){
+		$resultK1 = mysql_query("SELECT DISTINCT Knoten2id as Knoten FROM Kante WHERE Knoten1id=$node") or die(mysql_error());;
+		$resultK2 = mysql_query("SELECT DISTINCT Knoten1id as Knoten FROM Kante WHERE Knoten2id=$node") or die(mysql_error());;
+		
+		$j =0;
+		while ($row = mysql_fetch_array($resultK1)){
+			$possibleNodes[$j] = $row['Knoten'];
+			$j++;
+		}
+		while ($row = mysql_fetch_array($resultK2)){
+			$possibleNodes[$j] = $row['Knoten'];
+			$j++;
+		}		
+		
+		//Auswahl des Knotens
+		$nextNodeIndex = mt_rand(0, $j-1);
+		$node = $possibleNodes[$nextNodeIndex];
+		if(floor($timediffInMinutes)>10){
+			$moveTime = time() - ((($numOfSteps-1)-$i)*60);
+		}else{
+			$moveTime = $lastTimeMoved + (($i+1)*60);
+		}
+		
+		$dbTimestamp = date('Y-m-d H:i:s', $moveTime);
+		
+		//MisterX bewegen und Schritte speichern
+	    mysql_query("INSERT INTO misterx (KnotenId, Zeitpunkt) VALUES('$node', '$dbTimestamp')") or die(mysql_error());	
+	}	
+}
+
+function getPositionMisterX()
+{
+	
+}
+
+
 ?>
