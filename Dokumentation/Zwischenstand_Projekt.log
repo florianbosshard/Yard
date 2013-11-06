@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.9.29)  4 NOV 2013 11:17
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.9.29)  6 NOV 2013 22:21
 entering extended mode
 **Zwischenstand_Projekt.tex
 (C:\xampp\htdocs\20131028_Yard\Yard\Dokumentation\Zwischenstand_Projekt.tex
@@ -388,16 +388,58 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 23.
- [2] [3]
+ [2]
+<Bilder/HomeScreen.jpg, id=14, 361.35pt x 642.4pt>
+File: Bilder/HomeScreen.jpg Graphic file (type jpg)
+ <use Bilder/HomeScreen.jpg>
+Package pdftex.def Info: Bilder/HomeScreen.jpg used on input line 57.
+(pdftex.def)             Requested size: 227.62204pt x 404.66513pt.
+
+<Bilder/Karte.jpg, id=15, 642.4pt x 1140.26pt>
+File: Bilder/Karte.jpg Graphic file (type jpg)
+ <use Bilder/Karte.jpg>
+Package pdftex.def Info: Bilder/Karte.jpg used on input line 58.
+(pdftex.def)             Requested size: 227.62204pt x 404.02087pt.
+
+<Bilder/Position.jpg, id=16, 642.4pt x 1140.26pt>
+File: Bilder/Position.jpg Graphic file (type jpg)
+ <use Bilder/Position.jpg>
+Package pdftex.def Info: Bilder/Position.jpg used on input line 59.
+(pdftex.def)             Requested size: 227.62204pt x 404.02087pt.
+
+<Bilder/KeinePosition.jpg, id=17, 642.4pt x 1140.26pt>
+File: Bilder/KeinePosition.jpg Graphic file (type jpg)
+
+<use Bilder/KeinePosition.jpg>
+Package pdftex.def Info: Bilder/KeinePosition.jpg used on input line 60.
+(pdftex.def)             Requested size: 227.62204pt x 404.02087pt.
+
+Overfull \hbox (39.42374pt too wide) in paragraph at lines 57--61
+[] []
+ []
+
+
+Overfull \hbox (39.42374pt too wide) in paragraph at lines 57--61
+[] [] 
+ []
+
+[3]
+Overfull \vbox (240.99933pt too high) has occurred while \output is active []
+
+
+[4 <C:/xampp/htdocs/20131028_Yard/Yard/Dokumentation/Bilder/HomeScreen.jpg> <C:
+/xampp/htdocs/20131028_Yard/Yard/Dokumentation/Bilder/Karte.jpg> <C:/xampp/htdo
+cs/20131028_Yard/Yard/Dokumentation/Bilder/Position.jpg> <C:/xampp/htdocs/20131
+028_Yard/Yard/Dokumentation/Bilder/KeinePosition.jpg>]
 (C:\xampp\htdocs\20131028_Yard\Yard\Dokumentation\Zwischenstand_Projekt.aux) ) 
 Here is how much of TeX's memory you used:
- 1851 strings out of 493921
- 24985 string characters out of 3144879
+ 1873 strings out of 493921
+ 25444 string characters out of 3144879
  85262 words of memory out of 3000000
- 5151 multiletter control sequences out of 15000+200000
+ 5167 multiletter control sequences out of 15000+200000
  8145 words of font info for 29 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 27i,7n,19p,328b,199s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,7n,19p,334b,199s stack positions out of 5000i,500n,10000p,200000b,50000s
 <
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/P
@@ -405,9 +447,9 @@ rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Prog
 ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program
  Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Fi
 les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Zwischenstand_Projekt.pdf (3 pages, 87074 bytes).
+Output written on Zwischenstand_Projekt.pdf (4 pages, 683655 bytes).
 PDF statistics:
- 36 PDF objects out of 1000 (max. 8388607)
+ 43 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
