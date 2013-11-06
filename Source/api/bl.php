@@ -142,7 +142,7 @@ function moveMisterX()
 		$dbTimestamp = date('Y-m-d H:i:s', $moveTime);
 		
 		//MisterX bewegen und Schritte speichern
-	    mysql_query("INSERT INTO misterx (KnotenId, Zeitpunkt) VALUES('$node', '$dbTimestamp')") or die(mysql_error());	
+	    mysql_query("INSERT INTO Misterx (KnotenId, Zeitpunkt) VALUES('$node', '$dbTimestamp')") or die(mysql_error());	
 	}	
 }
 
