@@ -1,74 +1,34 @@
-   * {
-   	margin: 0; 
-   	padding: 0;
-   }
-   html, body{
-      width: 100%;
-      height: 100%;
-  }
-  
-  #card_page {
-  	position: relative;
-  	height: 100%;
-  }
-  
-  #content {
-  	height: 100%;
-  }
-  #map {
-  	position: absolute;
-  	top: 44px;
-  	left: 0;
-  	right: 0;
-  	bottom: 0;
-  	width: auto;
-  	height: auto;
-  }
-  #catchButtonDiv {
-  	position: absolute; 
-  	bottom: 13px; 
-  	right: 13px;
-  	width: 120px;
-  }
-  
-  #catchButtonDiv input {
-  	background-color: #72aab4;
-  }
-  
-  body {
-  	overflow: hidden;
-  }
-  
-  /* Reset JQuery Mobile Stylesheet */
+/*////////////////////////////////////////////////////////////////
+ ///////// allgemeine Styles  ///////////////////////////////////////////////
+ /////////////////////////////////////////////////////////////////*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	overflow: hidden;
+}
+
+.ui-page {
+	background: #000;
+	background-image: url(../images/background.jpg);
+	background-size: cover;
+}
+
+/* Reset JQuery Mobile Stylesheet */
 .ui-content {
 	padding: 0;
-	
-}
-
-#messagePopup-popup {
-	height: auto;
-	width: 80%;
-	padding: 5px;
-}
-
-
-
-/*////////////////////////////////////////////////////////////////
-///////// allgemeine Styles  ///////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////*/
-body {
-	background-image: url(images/background.jpg);
-	// background-color: black;
-	background-repeat: repeat;
-}
-
-h1 {
-	color: #FFEC8B;
 }
 
 .ui-input-text {
 	background-color: #f2f2f2;
-	
 }
 
 .bigImage {
@@ -76,22 +36,53 @@ h1 {
 	height: auto;
 }
 
-
-
-
-
 /*///////////////////////////////////////////////////////////////
-/////////// Login Page /////////////////////////////////////////
-///////////////////////////////////////////////////////////////*/
+ /////////// Login Page /////////////////////////////////////////
+ ///////////////////////////////////////////////////////////////*/
 
 #frontImage {
 	margin: 14.28% auto 10% 24%;
-	
 }
 
 input::-moz-placeholder, textarea::-moz-placeholder {
 	color: #333333;
 }
 
+/*///////////////////////////////////////////////////////////////
+ /////////// Game Page /////////////////////////////////////////
+ ///////////////////////////////////////////////////////////////*/
 
+#card_page {
+	position: relative;
+	height: 100%;
+}
+
+#content {
+	height: 100%;
+}
+#map {
+	position: absolute;
+	top: 44px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: auto;
+	height: auto;
+}
+#catchButtonDiv {
+	position: absolute;
+	bottom: 13px;
+	right: 13px;
+	width: 120px;
+}
+
+#catchButtonDiv input {
+	background-color: #72aab4;
+}
+
+#messagePopup-popup {
+	height: auto;
+	width: 80%;
+	padding: 5px;
+}
 
