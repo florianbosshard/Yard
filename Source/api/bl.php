@@ -57,30 +57,40 @@ function getGraph() {
 function addNewPlayer($name) {
 	mysql_query("INSERT INTO Spieler (Name) VALUES('$name') ") or die(mysql_error());
 
+
+	$query = "SELECT Id FROM Spieler WHERE Name ='".$name ."' ORDER By Id DESC LIMIT 1";
+	$result = mysql_query($query);
+	
+	$spieler = mysql_fetch_array($result);
+	
+
 	$_SESSION['name'] = $name;
-	$_SESSION['userId'] = 1;
+	$_SESSION['userId'] = $spieler['Id'];
 
 	echo json_encode(array("message" => "Neuer Spieler hinzugefuegt"));
 }
 
 function catchMisterX($userId, $latitude, $longitude){
 	// Finde heraus, bei welchem Knoten der Benutzer steht
-	
-	
 	$query = "SELECT Id FROM  Knoten WHERE Longitude BETWEEN ". ($longitude - 0.000100). " AND ".  ($longitude + 0.000100) ." AND Latitude BETWEEN ". ($latitude - 0.000100). " AND ".  ($latitude + 0.000100) ;
 
 	$result = mysql_query($query );
 	echo mysql_error();
 	
 	if(mysql_num_rows($result) == 0){
-		die(json_encode(array("message"=> "Du konntest keinem Punkt zugeordnet werden.")));	
+		die(json_encode(array("message"=> "Du befindest dich nicht bei einem der eingezeichneten Knoten. ")));	
 	} 
 	if(mysql_num_rows($result) > 1){
-		die(json_encode(array("message"=> "Keine eindeutige Zuordnung möglich.")));	
+		die(json_encode(array("message"=> "Keine eindeutige Zuordnung zu einem Knoten möglich. Gehe näher zum Zentrum des Knotens. ")));	
 	} 
-	
-	
 	$knoten = mysql_fetch_array($result);
+	
+	
+	$userLocationInsert = "INSERT INTO SpielerPosition(SpielerId, KnotenId) VALUES(".intval($_SESSION['userId']).", ".intval($knoten['Id']).")";
+	mysql_query($userLocationInsert);
+	echo mysql_error();
+	
+	
 	// Hole die letzten standorte von Mister X
 	$result = mysql_query("SELECT m.KnotenId, m.Zeitpunkt, k.Latitude, k.Longitude FROM Misterx m JOIN Knoten k ON  m.KnotenId = k.Id ORDER BY m.Zeitpunkt DESC LIMIT 2");
 	echo mysql_error();
