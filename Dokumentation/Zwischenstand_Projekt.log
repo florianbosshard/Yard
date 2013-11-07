@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  7 NOV 2013 09:36
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  7 NOV 2013 11:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -439,60 +439,56 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 <Bilder/HomeScreen.jpg, id=15, 361.35pt x 642.4pt>
 File: Bilder/HomeScreen.jpg Graphic file (type jpg)
  <use Bilder/HomeScreen.jpg>
-Package pdftex.def Info: Bilder/HomeScreen.jpg used on input line 58.
+Package pdftex.def Info: Bilder/HomeScreen.jpg used on input line 59.
 (pdftex.def)             Requested size: 227.62204pt x 404.66513pt.
 
 <Bilder/Karte.jpg, id=16, 642.4pt x 1140.26pt>
 File: Bilder/Karte.jpg Graphic file (type jpg)
  <use Bilder/Karte.jpg>
-Package pdftex.def Info: Bilder/Karte.jpg used on input line 59.
+Package pdftex.def Info: Bilder/Karte.jpg used on input line 60.
 (pdftex.def)             Requested size: 227.62204pt x 404.02087pt.
 
 <Bilder/Position.jpg, id=17, 642.4pt x 1140.26pt>
 File: Bilder/Position.jpg Graphic file (type jpg)
  <use Bilder/Position.jpg>
-Package pdftex.def Info: Bilder/Position.jpg used on input line 60.
+Package pdftex.def Info: Bilder/Position.jpg used on input line 61.
 (pdftex.def)             Requested size: 227.62204pt x 404.02087pt.
 
 <Bilder/KeinePosition.jpg, id=18, 642.4pt x 1140.26pt>
 File: Bilder/KeinePosition.jpg Graphic file (type jpg)
 
 <use Bilder/KeinePosition.jpg>
-Package pdftex.def Info: Bilder/KeinePosition.jpg used on input line 61.
+Package pdftex.def Info: Bilder/KeinePosition.jpg used on input line 62.
 (pdftex.def)             Requested size: 227.62204pt x 404.02087pt.
 
-Overfull \hbox (39.42374pt too wide) in paragraph at lines 58--62
+Overfull \hbox (39.42374pt too wide) in paragraph at lines 59--63
 [] []
  []
 
 
-Overfull \hbox (39.42374pt too wide) in paragraph at lines 58--62
+Overfull \hbox (39.42374pt too wide) in paragraph at lines 59--63
 [] [] 
  []
 
-[3]
-Overfull \vbox (240.99933pt too high) has occurred while \output is active []
-
-
-[4 <./Bilder/HomeScreen.jpg> <./Bilder/Karte.jpg> <./Bilder/Position.jpg> <./Bi
-lder/KeinePosition.jpg>] <Bilder/notFound.png, id=25, 359.3425pt x 477.785pt>
+[3] [4 <./Bilder/HomeScreen.jpg> <./Bilder/Karte.jpg>]
+<Bilder/notFound.png, id=25, 359.3425pt x 477.785pt>
 File: Bilder/notFound.png Graphic file (type png)
-
-<use Bilder/notFound.png>
-Package pdftex.def Info: Bilder/notFound.png used on input line 65.
+ <use Bilder/notFound.png>
+Package pdftex.def Info: Bilder/notFound.png used on input line 66.
 (pdftex.def)             Requested size: 227.62204pt x 302.65376pt.
- <Bilder/rest.png, id=26, 1149.29375pt x 471.7625pt>
-File: Bilder/rest.png Graphic file (type png)
 
-<use Bilder/rest.png>
-Package pdftex.def Info: Bilder/rest.png used on input line 68.
+[5 <./Bilder/Position.jpg> <./Bilder/KeinePosition.jpg>]
+<Bilder/rest.png, id=29, 1149.29375pt x 471.7625pt>
+File: Bilder/rest.png Graphic file (type png)
+ <use Bilder/rest.png>
+Package pdftex.def Info: Bilder/rest.png used on input line 69.
 (pdftex.def)             Requested size: 426.79134pt x 175.19005pt.
 
-Overfull \hbox (8.53766pt too wide) in paragraph at lines 67--69
+Overfull \hbox (8.53766pt too wide) in paragraph at lines 68--70
 [] 
  []
 
-[5 <./Bilder/notFound.png> <./Bilder/rest.png>] (./Zwischenstand_Projekt.aux) )
+[6 <./Bilder/notFound.png> <./Bilder/rest.png>] (./Zwischenstand_Projekt.aux) )
  
 Here is how much of TeX's memory you used:
  2193 strings out of 493633
@@ -501,17 +497,17 @@ Here is how much of TeX's memory you used:
  5465 multiletter control sequences out of 15000+200000
  8145 words of font info for 29 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 38i,7n,23p,331b,199s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,7n,23p,386b,199s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
 /usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
 usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
 r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
 local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/lo
 cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Zwischenstand_Projekt.pdf (5 pages, 895576 bytes).
+Output written on Zwischenstand_Projekt.pdf (6 pages, 896142 bytes).
 PDF statistics:
- 50 PDF objects out of 1000 (max. 8388607)
- 30 compressed objects within 1 object stream
+ 53 PDF objects out of 1000 (max. 8388607)
+ 32 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

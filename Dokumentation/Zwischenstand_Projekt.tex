@@ -30,21 +30,22 @@ Das Projekt wird von folgenden Personen entwickelt:
 Folgend werden Funktionalitäten aufgelistet die bis zum 6. November 2013 umgesetzt wurden: 
 \begin{itemize}
 \item Datenbank mit den entsprechneden Tabellen ist aufgesetzt, sowie mit Koordinatenpunkten befüllt.
-\item Anmelde-Screan wo man mit der Angabe des Namens sich für das Spiel einloggen kann. Der Name wird zum Server gesendet und in der Datenbank gespeichert. Eine neue Session wird gestartet.
+\item Anmelde-Screen wo man mit der Angabe des Namens sich für das Spiel einloggen kann. Der Name wird zum Server gesendet und in der Datenbank gespeichert. Eine neue Session wird gestartet.
 \item Die Koordinatenpunkte werden auf der Karte eingezeichtet und mit Linien verbunden. Es können auch Zwischenpunkte gesetzt werden, damit die Koordinatenunkt nicht nur mit geraden Linien verbunden werden können.
 \item Die Logik, dass sich MisterX automatisch bewegt ist implementiert.
-\item Mit einem Klick auf den Button ``Catch me!'' wird die aktuelle Position des Spielers ermittelt und an den Server geschickt. Der Spieler erhält dann die Nachricht, ob er den MisterX gefangen hat, ob nicht oder ob er keinem Koordinatenpunkt auf der Karte zugewiesen werden konnte.
+\item Mit einem Klick auf den Button ``Catch me!'' wird die aktuelle Position des Spielers ermittelt und an den Server geschickt. Der Spieler erhält dann die Nachricht, ob er den MisterX gefangen hat, ob nicht oder ob er keinem Koordinatenpunkt auf der Karte zugewiesen werden konnte. Die Position von MisterX auf der Karte wird angezeigt. 
 \end{itemize}
 
-Die aktuelle Applikation kann unter yard.prusik.ch angeschaut werden. 
+Die aktuelle Applikation kann unter http://yard.prusik.ch angeschaut werden. 
 
 \section{Aufgetretene Probleme}
 Wir haben anfangs versucht mit jQueryMobile 1.4 zu arbeiten, sind dann aber auf Probleme beim Einbetten der Karte gestossen. Daher haben wir zurück auf jQueryMobile 1.3 gewechselt.
 
+Beim Loginscreen erscheint in gewissen Browsern kein Scrolling. Das Bild oberhalb des Login-Formulars skaliert nicht korrekt. 
 
 \section{Offene Funktionalitäten}
 \begin{itemize}
-\item MisterX und die Spieler auf der Karte anzeigen.
+\item Spielerpositionen in der Datenbank abspeichern und auf der Karte anzeigen.
 \item Side-Menu zur Navigation mit den Einträgen Hilfe und About.
 \item Spiel und Session beenden sowie Aufräumen der Datenbank ausprogrammieren.
 \item Mehr Punkte auf der Karte erfassen.

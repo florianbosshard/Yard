@@ -1,5 +1,5 @@
 \contentsline {section}{\numberline {1}Projektteam}{2}
 \contentsline {section}{\numberline {2}Umgesetzte Funktionalit\IeC {\"a}ten}{2}
 \contentsline {section}{\numberline {3}Aufgetretene Probleme}{2}
-\contentsline {section}{\numberline {4}Offene Funktionalit\IeC {\"a}ten}{2}
+\contentsline {section}{\numberline {4}Offene Funktionalit\IeC {\"a}ten}{3}
 \contentsline {section}{\numberline {5}Screenshots}{4}
