@@ -57,30 +57,38 @@ function getGraph() {
 function addNewPlayer($name) {
 	mysql_query("INSERT INTO Spieler (Name) VALUES('$name') ") or die(mysql_error());
 
+
+	$query = "SELECT Id FROM Spieler WHERE Name ='".$name ."' ORDER By Id DESC LIMIT 1";
+	$result = mysql_query($query);
+	
+	$spieler = mysql_fetch_array($result);
+	
+
 	$_SESSION['name'] = $name;
-	$_SESSION['userId'] = 1;
+	$_SESSION['userId'] = $spieler['Id'];
 
 	echo json_encode(array("message" => "Neuer Spieler hinzugefuegt"));
 }
 
-function catchMisterX($userId, $latitude, $longitude){
+function catchMisterX($latitude, $longitude){
 	// Finde heraus, bei welchem Knoten der Benutzer steht
-	
-	
 	$query = "SELECT Id FROM  Knoten WHERE Longitude BETWEEN ". ($longitude - 0.000100). " AND ".  ($longitude + 0.000100) ." AND Latitude BETWEEN ". ($latitude - 0.000100). " AND ".  ($latitude + 0.000100) ;
 
 	$result = mysql_query($query );
 	echo mysql_error();
 	
 	if(mysql_num_rows($result) == 0){
-		die(json_encode(array("message"=> "Du konntest keinem Punkt zugeordnet werden.")));	
+		die(json_encode(array("message"=> "Du befindest dich nicht bei einem der eingezeichneten Knoten. ")));	
 	} 
 	if(mysql_num_rows($result) > 1){
-		die(json_encode(array("message"=> "Keine eindeutige Zuordnung möglich.")));	
+		die(json_encode(array("message"=> "Keine eindeutige Zuordnung zu einem Knoten möglich. Gehe näher zum Zentrum des Knotens. ")));	
 	} 
-	
-	
 	$knoten = mysql_fetch_array($result);
+	
+	
+
+	
+	
 	// Hole die letzten standorte von Mister X
 	$result = mysql_query("SELECT m.KnotenId, m.Zeitpunkt, k.Latitude, k.Longitude FROM Misterx m JOIN Knoten k ON  m.KnotenId = k.Id ORDER BY m.Zeitpunkt DESC LIMIT 2");
 	echo mysql_error();
@@ -88,6 +96,8 @@ function catchMisterX($userId, $latitude, $longitude){
 	$misterxPos = mysql_fetch_array($result);
 	// erste Position von Mister X stimmt mit der Position des Benutzers überein => gefunden
 	if($misterxPos['KnotenId'] == $knoten['Id']){
+		$userQueryInsert = "INSERT INTO Abfrage(SpielerId, KnotenId, Erfolg) VALUES(".intval($_SESSION['userId']).", ".intval($knoten['Id']).", 1)";
+		mysql_query($userQueryInsert);
 		die(json_encode(array("message"=> "Gratulation - du hast MisterX erwischt.")));	
 	}
 	
@@ -95,8 +105,29 @@ function catchMisterX($userId, $latitude, $longitude){
 	$misterxLastPos = mysql_fetch_array($result);
 	
 	
+	$userQueryInsert = "INSERT INTO Abfrage(SpielerId, KnotenId, Erfolg) VALUES(".intval($_SESSION['userId']).", ".intval($knoten['Id']).", 0)";
+	mysql_query($userQueryInsert);
+	echo mysql_error();
 	
-	die(json_encode(array("message"=> "Da ist Mister X nicht... ", "MisterXLast" => array("latitude" => $misterxLastPos['Latitude'], "longitude" => $misterxLastPos['Longitude'] ))));
+	$userLocationInsert = "INSERT INTO SpielerPosition(SpielerId, KnotenId) VALUES(".intval($_SESSION['userId']).", ".intval($knoten['Id']) .")  ON DUPLICATE KEY UPDATE KnotenId = ". intval($knoten['Id']);
+	mysql_query($userLocationInsert);
+	echo mysql_error();
+	
+	
+	$otherPlayersSelect = "SELECT DISTINCT Spieler.Name, Knoten.Longitude, Knoten.Latitude FROM SpielerPosition 
+		JOIN Abfrage ON SpielerPosition.SpielerId = Abfrage.SpielerId 
+		JOIN Spieler ON SpielerPosition.SpielerId = Spieler.Id
+		JOIN Knoten ON SpielerPosition.KnotenId = Knoten.Id";	
+	
+	
+	$otherPlayersResult = mysql_query($otherPlayersSelect);
+	$playerList = array();
+	while($player = mysql_fetch_assoc($otherPlayersResult)){
+		$playerList[] = $player;
+	}
+	
+	
+	die(json_encode(array("message"=> "Da ist Mister X nicht... ", "MisterXLast" => array("latitude" => $misterxLastPos['Latitude'], "longitude" => $misterxLastPos['Longitude'] ), "OtherPlayers" => $playerList)));
 	
 }
 

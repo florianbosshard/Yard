@@ -64,7 +64,6 @@ var yard = {
 					url : "/api/server.php/anfrage/",
 					dataType : "json",
 					data : JSON.stringify({
-						"userid" : "1",
 						"latitude" : position.coords.latitude,
 						"longitude" : position.coords.longitude
 					}),
