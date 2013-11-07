@@ -36,7 +36,7 @@ Folgend werden Funktionalitäten aufgelistet die bis zum 6. November 2013 umgese
 \item Mit einem Klick auf den Button ``Catch me!'' wird die aktuelle Position des Spielers ermittelt und an den Server geschickt. Der Spieler erhält dann die Nachricht, ob er den MisterX gefangen hat, ob nicht oder ob er keinem Koordinatenpunkt auf der Karte zugewiesen werden konnte.
 \end{itemize}
 
-Die aktuelle Applikation kann unter yard.prusik.ch eingesehen werden. 
+Die aktuelle Applikation kann unter yard.prusik.ch angeschaut werden. 
 
 \section{Aufgetretene Probleme}
 Wir haben anfangs versucht mit jQueryMobile 1.4 zu arbeiten, sind dann aber auf Probleme beim Einbetten der Karte gestossen. Daher haben wir zurück auf jQueryMobile 1.3 gewechselt.
@@ -59,4 +59,13 @@ Wir haben anfangs versucht mit jQueryMobile 1.4 zu arbeiten, sind dann aber auf 
 \includegraphics[width=8cm]{Bilder/Karte.jpg}
 \includegraphics[width=8cm]{Bilder/Position.jpg}
 \includegraphics[width=8cm]{Bilder/KeinePosition.jpg}
+
+
+Wenn MisterX nicht gefunden wurde, wird seine letzte Position mit einem roten Kreis dargestellt:  \\
+\includegraphics[width=8cm]{Bilder/notFound.png}
+
+Sowohl der Graph als auch die Anfrage werden über eine REST-Api über JSON übertragen \\
+\includegraphics[width=15cm]{Bilder/rest.png}
+
+
 \end{document}
