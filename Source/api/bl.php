@@ -73,7 +73,7 @@ function catchMisterX($userId, $latitude, $longitude){
 	echo mysql_error();
 	
 	if(mysql_num_rows($result) == 0){
-		die(json_encode(array("message"=> "Du konntest keinem Punkt zugeordnet werden.". $query)));	
+		die(json_encode(array("message"=> "Du konntest keinem Punkt zugeordnet werden.")));	
 	} 
 	if(mysql_num_rows($result) > 1){
 		die(json_encode(array("message"=> "Keine eindeutige Zuordnung möglich.")));	

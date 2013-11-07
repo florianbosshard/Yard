@@ -1,6 +1,7 @@
 var yard = {
 	map : null,
 	userLocation : null,
+	misterXCircle: null,
 	initMap : function() {
 		map = new L.Map('map', {
 			center : new L.LatLng(47.49901, 8.728935),
@@ -68,10 +69,25 @@ var yard = {
 						"longitude" : position.coords.longitude
 					}),
 					success : function(data, textStatus, jqXHR) {
-						console.log(data);
+						if(yard.misterXCircle){
+							map.removeLayer(yard.misterXCircle);
+						}
+						if(data.MisterXLast){
+							yard.misterXCircle = L.circle([data.MisterXLast.longitude, data.MisterXLast.latitude], 7, {
+								color: 'red',
+								fillColor: 'red',
+								fillOpacity: 1.0
+							});						
+							yard.misterXCircle.addTo(map);
+						}
+						
+						
+						
 						$("#messagePopup").popup();
 						$("#messagePopup").popup("open");
 						$("#message").text(data.message);
+						
+
 
 					},
 					error : function(jqXHR, textStatus, errorThrown) {
@@ -94,7 +110,7 @@ var yard = {
 			fillOpacity : 0.3
 		}).addTo(map);
 
-		L.marker([lat, lon]).addTo(map).bindPopup('Id:' + id).openPopup();
+		// L.marker([lat, lon]).addTo(map).bindPopup('Id:' + id).openPopup();
 	},
 	drawLine : function(latFrom, longFrom, latTo, longTo) {
 		var from = new L.LatLng(latFrom, longFrom);
