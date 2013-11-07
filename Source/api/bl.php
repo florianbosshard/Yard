@@ -70,7 +70,7 @@ function addNewPlayer($name) {
 	echo json_encode(array("message" => "Neuer Spieler hinzugefuegt"));
 }
 
-function catchMisterX($userId, $latitude, $longitude){
+function catchMisterX($latitude, $longitude){
 	// Finde heraus, bei welchem Knoten der Benutzer steht
 	$query = "SELECT Id FROM  Knoten WHERE Longitude BETWEEN ". ($longitude - 0.000100). " AND ".  ($longitude + 0.000100) ." AND Latitude BETWEEN ". ($latitude - 0.000100). " AND ".  ($latitude + 0.000100) ;
 
@@ -86,9 +86,7 @@ function catchMisterX($userId, $latitude, $longitude){
 	$knoten = mysql_fetch_array($result);
 	
 	
-	$userLocationInsert = "INSERT INTO SpielerPosition(SpielerId, KnotenId) VALUES(".intval($_SESSION['userId']).", ".intval($knoten['Id']).")";
-	mysql_query($userLocationInsert);
-	echo mysql_error();
+
 	
 	
 	// Hole die letzten standorte von Mister X
@@ -98,6 +96,8 @@ function catchMisterX($userId, $latitude, $longitude){
 	$misterxPos = mysql_fetch_array($result);
 	// erste Position von Mister X stimmt mit der Position des Benutzers überein => gefunden
 	if($misterxPos['KnotenId'] == $knoten['Id']){
+		$userQueryInsert = "INSERT INTO Abfrage(SpielerId, KnotenId, Erfolg) VALUES(".intval($_SESSION['userId']).", ".intval($knoten['Id']).", 1)";
+		mysql_query($userQueryInsert);
 		die(json_encode(array("message"=> "Gratulation - du hast MisterX erwischt.")));	
 	}
 	
@@ -105,8 +105,29 @@ function catchMisterX($userId, $latitude, $longitude){
 	$misterxLastPos = mysql_fetch_array($result);
 	
 	
+	$userQueryInsert = "INSERT INTO Abfrage(SpielerId, KnotenId, Erfolg) VALUES(".intval($_SESSION['userId']).", ".intval($knoten['Id']).", 0)";
+	mysql_query($userQueryInsert);
+	echo mysql_error();
 	
-	die(json_encode(array("message"=> "Da ist Mister X nicht... ", "MisterXLast" => array("latitude" => $misterxLastPos['Latitude'], "longitude" => $misterxLastPos['Longitude'] ))));
+	$userLocationInsert = "INSERT INTO SpielerPosition(SpielerId, KnotenId) VALUES(".intval($_SESSION['userId']).", ".intval($knoten['Id']) .")  ON DUPLICATE KEY UPDATE KnotenId = ". intval($knoten['Id']);
+	mysql_query($userLocationInsert);
+	echo mysql_error();
+	
+	
+	$otherPlayersSelect = "SELECT DISTINCT Spieler.Name, Knoten.Longitude, Knoten.Latitude FROM SpielerPosition 
+		JOIN Abfrage ON SpielerPosition.SpielerId = Abfrage.SpielerId 
+		JOIN Spieler ON SpielerPosition.SpielerId = Spieler.Id
+		JOIN Knoten ON SpielerPosition.KnotenId = Knoten.Id";	
+	
+	
+	$otherPlayersResult = mysql_query($otherPlayersSelect);
+	$playerList = array();
+	while($player = mysql_fetch_assoc($otherPlayersResult)){
+		$playerList[] = $player;
+	}
+	
+	
+	die(json_encode(array("message"=> "Da ist Mister X nicht... ", "MisterXLast" => array("latitude" => $misterxLastPos['Latitude'], "longitude" => $misterxLastPos['Longitude'] ), "OtherPlayers" => $playerList)));
 	
 }
 
