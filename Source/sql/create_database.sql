@@ -21,7 +21,7 @@ CREATE TABLE SpielerPosition
   KnotenId BIGINT UNSIGNED NOT NULL,
   FOREIGN KEY(SpielerId) REFERENCES Spieler(Id),
   FOREIGN KEY(KnotenId) REFERENCES Knoten(Id),
-  CONSTRAINT UNIQUE(SpielerId, KnotenId)
+  CONSTRAINT UNIQUE(SpielerId)
 )ENGINE=INNODB;
 
 CREATE TABLE Abfrage
@@ -30,8 +30,6 @@ CREATE TABLE Abfrage
   KnotenId BIGINT UNSIGNED NOT NULL,
   Zeitpunkt TIMESTAMP NOT NULL,
   Erfolg BOOL,
-  FOREIGN KEY(SpielerId) REFERENCES SpielerPosition(SpielerId),
-  FOREIGN KEY(KnotenId) REFERENCES SpielerPosition(KnotenId),
   CONSTRAINT UNIQUE(SpielerId, KnotenId, Zeitpunkt)
 )ENGINE=INNODB;
 
