@@ -7,7 +7,7 @@ var login = {
 			$.ajax({
 				type : 'POST',
 				contentType : "text/json",
-				url : "/api/server.php/login/",
+				url : "api/server.php/login/",
 				dataType : "json",
 				data : JSON.stringify({
 					"name" : name

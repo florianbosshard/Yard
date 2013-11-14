@@ -23,7 +23,7 @@ var yard = {
 			type : 'GET',
 			//contentType : 'application/json',
 			contentType : "text/json",
-			url : "/api/server.php/graph",
+			url : "api/server.php/graph",
 			dataType : "json",
 			success : function(data, textStatus, jqXHR) {
 				for (var i = 0; i < data.nodes.length; i++) {
@@ -61,7 +61,7 @@ var yard = {
 				$.ajax({
 					type : 'POST',
 					contentType : "text/json",
-					url : "/api/server.php/anfrage/",
+					url : "api/server.php/anfrage/",
 					dataType : "json",
 					data : JSON.stringify({
 						"latitude" : position.coords.latitude,
