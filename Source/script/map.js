@@ -96,8 +96,7 @@ var yard = {
 								var minuten = Math.floor(differenzSekunden / 60);
 								var sekunden = Math.floor(differenzSekunden - minuten* 60);
 								
-								
-								
+									
 								var marker = L.marker([otherPlayer.longitude, otherPlayer.latitude])
 									.bindPopup(otherPlayer.Name +" vor "+ minuten +" Minuten "+ sekunden +" Sekunden");
 								yard.otherPlayers.push(marker);
