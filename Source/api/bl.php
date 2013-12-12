@@ -85,6 +85,15 @@ function catchMisterX($latitude, $longitude){
 	} 
 	$knoten = mysql_fetch_array($result);
 	
+	$alterStandortQuery = "SELECT KnotenId FROM SpielerPosition WHERE SpielerId = ". intval($_SESSION['userId']);
+	$alterStandortResult = mysql_query($alterStandortQuery);
+	$alterStandortUser = mysql_fetch_array($alterStandortResult);
+	
+	if($alterStandortUser['KnotenId'] == $knoten['Id']){
+		die(json_encode(array("message"=> "Was für ein fauler Mister X Jäger... Du darfst nicht zweimal direkt nacheinander am selben Ort abfragen.")));
+	}
+	
+	
 	
 	// Hole die letzten standorte von Mister X
 	$result = mysql_query("SELECT m.KnotenId, m.Zeitpunkt, k.Latitude, k.Longitude FROM Misterx m JOIN Knoten k ON  m.KnotenId = k.Id ORDER BY m.Zeitpunkt DESC LIMIT 2");
