@@ -111,7 +111,7 @@ function catchMisterX($latitude, $longitude){
 	echo mysql_error();
 	
 	
-	$otherPlayersSelect = "SELECT DISTINCT Spieler.Name, Knoten.Longitude as longitude, Knoten.Latitude as latitude FROM SpielerPosition 
+	$otherPlayersSelect = "SELECT DISTINCT Spieler.Name, Knoten.Longitude as longitude, Knoten.Latitude as latitude, SpielerPosition.Zeitpunkt as zeitpunkt FROM SpielerPosition 
 		JOIN Abfrage ON SpielerPosition.SpielerId = Abfrage.SpielerId 
 		JOIN Spieler ON SpielerPosition.SpielerId = Spieler.Id
 		JOIN Knoten ON SpielerPosition.KnotenId = Knoten.Id";	

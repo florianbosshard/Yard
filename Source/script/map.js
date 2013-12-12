@@ -82,14 +82,25 @@ var yard = {
 						}
 						if(data.OtherPlayers){
 							// Remove existing markers
-							while(otherPlayers.length > 0){
-								map.removeLayer(otherPlayers.pop());
-							}
+							
+								while(yard.otherPlayers.length > 0){
+									map.removeLayer(yard.otherPlayers.pop());
+								}
 							
 							for(var i = 0;i< data.OtherPlayers.length;i++){
 								var otherPlayer = data.OtherPlayers[i];
-								var marker = L.marker([otherPlayer.longitude, otherPlayer.latitude]).bindPopup(otherPlayer.Name +" um ");
-								otherPlayers.push(marker);
+								
+								var datumSpieler = new Date(Date.parse(otherPlayer.zeitpunkt));
+								var datumNow = new Date();
+								var differenzSekunden = (datumNow.getTime() - datumSpieler.getTime()) / 1000;
+								var minuten = Math.floor(differenzSekunden / 60);
+								var sekunden = Math.floor(differenzSekunden - minuten* 60);
+								
+								
+								
+								var marker = L.marker([otherPlayer.longitude, otherPlayer.latitude])
+									.bindPopup(otherPlayer.Name +" vor "+ minuten +" Minuten "+ sekunden +" Sekunden");
+								yard.otherPlayers.push(marker);
 							    marker.addTo(map);
 							}	
 						}
