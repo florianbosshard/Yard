@@ -2,6 +2,7 @@ var yard = {
 	map : null,
 	userLocation : null,
 	misterXCircle: null,
+	otherPlayers: new Array(),
 	initMap : function() {
 		map = new L.Map('map', {
 			center : new L.LatLng(47.49901, 8.728935),
@@ -78,6 +79,19 @@ var yard = {
 								fillOpacity: 1.0
 							});						
 							yard.misterXCircle.addTo(map);
+						}
+						if(data.OtherPlayers){
+							// Remove existing markers
+							while(otherPlayers.length > 0){
+								map.removeLayer(otherPlayers.pop());
+							}
+							
+							for(var i = 0;i< data.OtherPlayers.length;i++){
+								var otherPlayer = data.OtherPlayers[i];
+								var marker = L.marker([otherPlayer.longitude, otherPlayer.latitude]).bindPopup(otherPlayer.Name +" um ");
+								otherPlayers.push(marker);
+							    marker.addTo(map);
+							}	
 						}
 						
 						

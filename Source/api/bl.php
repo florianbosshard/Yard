@@ -86,9 +86,6 @@ function catchMisterX($latitude, $longitude){
 	$knoten = mysql_fetch_array($result);
 	
 	
-
-	
-	
 	// Hole die letzten standorte von Mister X
 	$result = mysql_query("SELECT m.KnotenId, m.Zeitpunkt, k.Latitude, k.Longitude FROM Misterx m JOIN Knoten k ON  m.KnotenId = k.Id ORDER BY m.Zeitpunkt DESC LIMIT 2");
 	echo mysql_error();
@@ -114,7 +111,7 @@ function catchMisterX($latitude, $longitude){
 	echo mysql_error();
 	
 	
-	$otherPlayersSelect = "SELECT DISTINCT Spieler.Name, Knoten.Longitude, Knoten.Latitude FROM SpielerPosition 
+	$otherPlayersSelect = "SELECT DISTINCT Spieler.Name, Knoten.Longitude as longitude, Knoten.Latitude as latitude FROM SpielerPosition 
 		JOIN Abfrage ON SpielerPosition.SpielerId = Abfrage.SpielerId 
 		JOIN Spieler ON SpielerPosition.SpielerId = Spieler.Id
 		JOIN Knoten ON SpielerPosition.KnotenId = Knoten.Id";	
