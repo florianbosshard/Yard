@@ -72,6 +72,10 @@ var yard = {
 						if(yard.misterXCircle){
 							map.removeLayer(yard.misterXCircle);
 						}
+						while(yard.otherPlayers.length > 0){
+							map.removeLayer(yard.otherPlayers.pop());
+						}
+							
 						if(data.MisterXLast){
 							yard.misterXCircle = L.circle([data.MisterXLast.longitude, data.MisterXLast.latitude], 7, {
 								color: 'red',
@@ -82,11 +86,6 @@ var yard = {
 						}
 						if(data.OtherPlayers){
 							// Remove existing markers
-							
-								while(yard.otherPlayers.length > 0){
-									map.removeLayer(yard.otherPlayers.pop());
-								}
-							
 							for(var i = 0;i< data.OtherPlayers.length;i++){
 								var otherPlayer = data.OtherPlayers[i];
 								
