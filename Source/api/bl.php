@@ -185,10 +185,4 @@ function moveMisterX()
 	}	
 }
 
-function getPositionMisterX()
-{
-	
-}
-
-
 ?>
