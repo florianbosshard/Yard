@@ -2,6 +2,7 @@ var yard = {
 	map : null,
 	ownPositionMarker : null,
 	misterXCircle: null,
+	userPosition: null,
 	otherPlayers: new Array(),
 	initMap : function() {
 		map = new L.Map('map', {
@@ -22,7 +23,6 @@ var yard = {
 	drawGraph : function() {
 		$.ajax({
 			type : 'GET',
-			//contentType : 'application/json',
 			contentType : "text/json",
 			url : "api/server.php/graph",
 			dataType : "json",
@@ -44,12 +44,22 @@ var yard = {
 
 	},
 	markUserLocation : function() {
+	     //Extend the Default marker class
+         var RedIcon = L.Icon.Default.extend({
+            options: {
+            	    iconUrl: 'images/player.png', 
+            	    iconSize:     [32, 37],
+            }
+         });
+         var redIcon = new RedIcon();
 		if (navigator.geolocation) {
 			navigator.geolocation.watchPosition(function(position) {
+				yard.userPosition = position;
 				if(yard.ownPositionMarker){
 					map.removeLayer(yard.ownPositionMarker);
 				}
-				yard.ownPositionMarker = L.marker([position.coords.latitude, position.coords.longitude]);
+
+				yard.ownPositionMarker = L.marker([position.coords.latitude, position.coords.longitude], {icon: redIcon});
 				yard.ownPositionMarker.addTo(map);
 			}, function(error) {
 				alert(error);
@@ -59,74 +69,75 @@ var yard = {
 		}
 	},
 	catchMisterX : function() {
-		if (navigator.geolocation) {
-			navigator.geolocation.getCurrentPosition(function(position) {
-				// send current position to server
-				$.ajax({
-					type : 'POST',
-					contentType : "text/json",
-					url : "api/server.php/anfrage/",
-					dataType : "json",
-					data : JSON.stringify({
-						"latitude" : position.coords.latitude,
-						"longitude" : position.coords.longitude
-					}),
-					success : function(data, textStatus, jqXHR) {
-						if(yard.misterXCircle){
-							map.removeLayer(yard.misterXCircle);
-						}
-						while(yard.otherPlayers.length > 0){
-							map.removeLayer(yard.otherPlayers.pop());
-						}
+		//Extend the Default marker class
+         var BlueIcon = L.Icon.Default.extend({
+            options: {
+            	    iconUrl: 'images/otherPlayer.png', 
+            	    iconSize:     [32, 37],
+            }
+         });
+         var blueIcon = new BlueIcon();
+
+		// send current position to server
+		 $.ajax({
+			type : 'POST',
+			contentType : "text/json",
+			url : "api/server.php/anfrage/",
+			dataType : "json",
+			data : JSON.stringify({
+				"latitude" : yard.userPosition.coords.latitude,
+				"longitude" : yard.userPosition.coords.longitude
+			}),
+			success : function(data, textStatus, jqXHR) {
+				if(yard.misterXCircle){
+					map.removeLayer(yard.misterXCircle);
+				}
+				while(yard.otherPlayers.length > 0){
+					map.removeLayer(yard.otherPlayers.pop());
+				}
+					
+				if(data.MisterXLast){
+					yard.misterXCircle = L.circle([data.MisterXLast.longitude, data.MisterXLast.latitude], 7, {
+						color: 'red',
+						fillColor: 'red',
+						fillOpacity: 1.0
+					});						
+					yard.misterXCircle.addTo(map);
+				}
+				if(data.OtherPlayers){
+					// Remove existing markers
+					for(var i = 0;i< data.OtherPlayers.length;i++){
+						var otherPlayer = data.OtherPlayers[i];
+						
+						var datumSpieler = new Date(Date.parse(otherPlayer.zeitpunkt));
+						var datumNow = new Date();
+						var differenzSekunden = (datumNow.getTime() - datumSpieler.getTime()) / 1000;
+						var minuten = Math.floor(differenzSekunden / 60);
+						var sekunden = Math.floor(differenzSekunden - minuten* 60);
+						
 							
-						if(data.MisterXLast){
-							yard.misterXCircle = L.circle([data.MisterXLast.longitude, data.MisterXLast.latitude], 7, {
-								color: 'red',
-								fillColor: 'red',
-								fillOpacity: 1.0
-							});						
-							yard.misterXCircle.addTo(map);
-						}
-						if(data.OtherPlayers){
-							// Remove existing markers
-							for(var i = 0;i< data.OtherPlayers.length;i++){
-								var otherPlayer = data.OtherPlayers[i];
-								
-								var datumSpieler = new Date(Date.parse(otherPlayer.zeitpunkt));
-								var datumNow = new Date();
-								var differenzSekunden = (datumNow.getTime() - datumSpieler.getTime()) / 1000;
-								var minuten = Math.floor(differenzSekunden / 60);
-								var sekunden = Math.floor(differenzSekunden - minuten* 60);
-								
-									
-								var marker = L.marker([otherPlayer.longitude, otherPlayer.latitude])
-									.bindPopup(otherPlayer.Name +" vor "+ minuten +" Minuten "+ sekunden +" Sekunden");
-								yard.otherPlayers.push(marker);
-							    marker.addTo(map);
-							}	
-						}
-						
-						
-						
-						$("#messagePopup").popup();
-						$("#messagePopup").popup("open");
-						$("#message").text(data.message);
-						
+						var marker = L.marker([otherPlayer.longitude, otherPlayer.latitude], {icon: blueIcon})
+							.bindPopup(otherPlayer.Name +" vor "+ minuten +" Minuten "+ sekunden +" Sekunden");
+						yard.otherPlayers.push(marker);
+					    marker.addTo(map);
+					}	
+				}
+				
+				
+				
+				$("#messagePopup").popup();
+				$("#messagePopup").popup("open");
+				$("#message").text(data.message);
+				
 
 
-					},
-					error : function(jqXHR, textStatus, errorThrown) {
-						console.log(textStatus);
-						console.log(errorThrown);
-					}
-				});
-			}, function(error) {
-				alert(error);
-			});
-		} else {
-			alert("navigator.geolocation ist ausgeschaltet");
-		}
-
+			},
+			error : function(jqXHR, textStatus, errorThrown) {
+				console.log(textStatus);
+				console.log(errorThrown);
+			}
+		});
+			
 	},
 	drawNode : function(lat, lon, id) {
 		var circle = L.circle([lat, lon], 7, {
@@ -151,7 +162,6 @@ var yard = {
 		});
 
 		map.addLayer(polyline);
-
 	}
 };
 
