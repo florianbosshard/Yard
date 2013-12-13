@@ -140,7 +140,7 @@ var yard = {
 			
 	},
 	drawNode : function(lat, lon, id) {
-		var circle = L.circle([lat, lon], 7, {
+		var circle = L.circle([lat, lon], 10, {
 			color : 'blue',
 			fillColor : 'blue',
 			fillOpacity : 0.3
