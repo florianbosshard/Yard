@@ -62,10 +62,10 @@ var yard = {
 				yard.ownPositionMarker = L.marker([position.coords.latitude, position.coords.longitude], {icon: redIcon});
 				yard.ownPositionMarker.addTo(map);
 			}, function(error) {
-				alert(error);
+				window.location = "gpsError.html";
 			});
 		} else {
-			alert("navigator.geolocation ist ausgeschaltet");
+				window.location = "gpsError.html";
 		}
 	},
 	catchMisterX : function() {
@@ -97,7 +97,7 @@ var yard = {
 				}
 					
 				if(data.MisterXLast){
-					yard.misterXCircle = L.circle([data.MisterXLast.longitude, data.MisterXLast.latitude], 7, {
+					yard.misterXCircle = L.circle([data.MisterXLast.longitude, data.MisterXLast.latitude], 10, {
 						color: 'red',
 						fillColor: 'red',
 						fillOpacity: 1.0
