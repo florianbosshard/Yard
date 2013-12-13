@@ -45,7 +45,7 @@ var yard = {
 	},
 	markUserLocation : function() {
 		if (navigator.geolocation) {
-			navigator.geolocation.getCurrentPosition(function(position) {
+			navigator.geolocation.watchPosition(function(position) {
 				if(yard.ownPositionMarker){
 					map.removeLayer(yard.ownPositionMarker);
 				}
@@ -57,7 +57,6 @@ var yard = {
 		} else {
 			alert("navigator.geolocation ist ausgeschaltet");
 		}
-		window.setTimeout(yard.markUserLocation, 5000);
 	},
 	catchMisterX : function() {
 		if (navigator.geolocation) {
