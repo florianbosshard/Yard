@@ -1,6 +1,6 @@
 var yard = {
 	map : null,
-	userLocation : null,
+	ownPositionMarker : null,
 	misterXCircle: null,
 	otherPlayers: new Array(),
 	initMap : function() {
@@ -46,14 +46,18 @@ var yard = {
 	markUserLocation : function() {
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(function(position) {
-				userLocation = position;
-				ownPositionMarker = L.marker([position.coords.latitude, position.coords.longitude]).addTo(map);
+				if(yard.ownPositionMarker){
+					map.removeLayer(yard.ownPositionMarker);
+				}
+				yard.ownPositionMarker = L.marker([position.coords.latitude, position.coords.longitude]);
+				yard.ownPositionMarker.addTo(map);
 			}, function(error) {
 				alert(error);
 			});
 		} else {
 			alert("navigator.geolocation ist ausgeschaltet");
 		}
+		window.setTimeout(yard.markUserLocation, 5000);
 	},
 	catchMisterX : function() {
 		if (navigator.geolocation) {
@@ -160,5 +164,7 @@ $(document).ready(function() {
 	yard.drawGraph();
 	$("#btnCatchMisterX").click(yard.catchMisterX);
 	
+	yard.markUserLocation();
+
 
 });
