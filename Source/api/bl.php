@@ -125,7 +125,7 @@ function catchMisterX($latitude, $longitude){
 		JOIN Spieler ON SpielerPosition.SpielerId = Spieler.Id
 		JOIN Knoten ON SpielerPosition.KnotenId = Knoten.Id 
 		
-		WHERE SpielerPosition.Zeitpunkt > NOW() - INTERVAL 10 MINUTE";	
+		WHERE SpielerPosition.Zeitpunkt > NOW() - INTERVAL 10 MINUTE AND Spieler.Id <> ". intval($_SESSION['userId']);	
 	
 	
 	$otherPlayersResult = mysql_query($otherPlayersSelect);
