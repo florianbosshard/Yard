@@ -29,6 +29,16 @@ html, body {
 	background-color: #f2f2f2;
 }
 
+.textcontentBox {
+	margin: 10% auto;
+	width: 85%;
+	height: 85%;
+	background-color: #F4E0A8;
+	padding: 20px 15px;
+	text-align: justify;
+}
+
+
 
 
 /*///////////////////////////////////////////////////////////////
