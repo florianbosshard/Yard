@@ -16,7 +16,15 @@ if(!$dbCon){
 	die("Datenbank nicht geöffnet. Fehlermeldung: ". mysql_error());
 }
 
+/**
+ * Gibt den Graph als JSON zurück
+ */
 function getGraph() {
+	// Prüfe ob die Person eingeloggt ist. Wenn nicht, wird kein Graph zurückgegeben. 
+	if(!(is_array($_SESSION) && isset($_SESSION['userId']))){
+		die(json_encode(array("loggedIn" => false)));
+	}	
+		
 	$nodeArray = array();
 	$lineArray = array();
 
@@ -48,14 +56,17 @@ function getGraph() {
 		}
 	}
 
-	//Erzeugung der Graph-Array
-	$graphArray = array("nodes" => $nodeArray, "lines" => $lineArray);
+	//Erzeugung des Graph-Array
+	$graphArray = array("nodes" => $nodeArray, "lines" => $lineArray, "loggedIn" => true);
 
 	echo json_encode($graphArray);
 }
 
+/**
+ * Adds a new player
+ */
 function addNewPlayer($name) {
-	mysql_query("INSERT INTO Spieler (Name) VALUES('$name') ") or die(mysql_error());
+	mysql_query("INSERT INTO Spieler (Name) VALUES('".mysql_real_escape_string($name)."') ") or die(mysql_error());
 
 
 	$query = "SELECT Id FROM Spieler WHERE Name ='".$name ."' ORDER By Id DESC LIMIT 1";
@@ -63,19 +74,19 @@ function addNewPlayer($name) {
 	
 	$spieler = mysql_fetch_array($result);
 	
-
 	$_SESSION['name'] = $name;
 	$_SESSION['userId'] = $spieler['Id'];
 
 	echo json_encode(array("message" => "Neuer Spieler hinzugefuegt"));
 }
-
+/**
+ *  Try to catch mister X, based on given latitude and longitude
+ */
 function catchMisterX($latitude, $longitude){
 	// Finde heraus, bei welchem Knoten der Benutzer steht
 	$query = "SELECT Id FROM  Knoten WHERE Longitude BETWEEN ". ($longitude - 0.000100). " AND ".  ($longitude + 0.000100) ." AND Latitude BETWEEN ". ($latitude - 0.000100). " AND ".  ($latitude + 0.000100) ;
 
 	$result = mysql_query($query );
-	echo mysql_error();
 	
 	if(mysql_num_rows($result) == 0){
 		die(json_encode(array("message"=> "Du befindest dich nicht bei einem der eingezeichneten Knoten. ")));	
@@ -97,7 +108,6 @@ function catchMisterX($latitude, $longitude){
 	
 	// Hole die letzten standorte von Mister X
 	$result = mysql_query("SELECT m.KnotenId, m.Zeitpunkt, k.Latitude, k.Longitude FROM Misterx m JOIN Knoten k ON  m.KnotenId = k.Id ORDER BY m.Zeitpunkt DESC LIMIT 2");
-	echo mysql_error();
 	
 	$misterxPos = mysql_fetch_array($result);
 	// erste Position von Mister X stimmt mit der Position des Benutzers überein => gefunden
@@ -113,11 +123,9 @@ function catchMisterX($latitude, $longitude){
 	
 	$userQueryInsert = "INSERT INTO Abfrage(SpielerId, KnotenId, Erfolg) VALUES(".intval($_SESSION['userId']).", ".intval($knoten['Id']).", 0)";
 	mysql_query($userQueryInsert);
-	echo mysql_error();
 	
 	$userLocationInsert = "INSERT INTO SpielerPosition(SpielerId, KnotenId) VALUES(".intval($_SESSION['userId']).", ".intval($knoten['Id']) .")  ON DUPLICATE KEY UPDATE KnotenId = ". intval($knoten['Id']);
 	mysql_query($userLocationInsert);
-	echo mysql_error();
 	
 	
 	$otherPlayersSelect = "SELECT DISTINCT Spieler.Name, Knoten.Longitude as longitude, Knoten.Latitude as latitude, SpielerPosition.Zeitpunkt as zeitpunkt FROM SpielerPosition 
@@ -139,6 +147,9 @@ function catchMisterX($latitude, $longitude){
 	
 }
 
+/**
+ * Moves MisterX up to 10 steps (depending of last call)
+ */
 function moveMisterX()
 {
 	//Letzte Position von MisterX lesen

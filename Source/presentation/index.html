@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Winterthur Yard</title>
+
+		<meta name="description" content="Online Webapp">
+		<meta name="author" content="Florian Bosshard">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Winterthur Yard</h1>
+					<img src="bilder/yardLogo.png"/>
+					<h3>WBE Projekt Präsentation </h3>
+					<p>
+						<small>Raphael Spörri, Maja Fritschi, Florian Bosshard</small>
+					</p>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>Projektidee / Ziele</h2>
+						<img width="280" height="326" src="img/ziele.jpg" alt="Unicorn">
+					</section>
+					<section>
+						<h2>Scotland Yard</h2>
+						<img src="bilder/MisterX.jpg" />
+						<ul>
+							<li>Schnitzeljagd durch die Winterthurer Altstadt</li>
+							<li>Graph entlang den Gassen der Altstadt </li>
+							<li>Geolocation zur Ortung der Spieler</li>
+							<li>Mister X kennt Koordinaten eines <a href="http://coord.info/GC4R53R" target="_blank">Geocaches</a></li>
+						</ul>
+					</section>
+				</section>
+
+
+
+				<section>
+					<h2>Demo</h2>
+					
+					<a href="http://yard.prusik.ch" target="_blank">http://yard.prusik.ch</a>
+
+					<br />
+					<img src="bilder/spielOriginalDemo.JPG" width="400px"/>
+
+				</section>
+				<section>
+					<h2>Open Street Map</h2>
+					
+					The Free Wiki World Map
+					<br /> <br />
+					<img src="bilder/osm.png" style="border: 0;"/>
+					
+				</section>
+
+
+				<section>
+					<section>
+						<h2>JavaScript</h2>
+						<h5>Grundsätzlicher Aufbau map.js</h5>
+						<pre><code data-trim contenteditable>
+var yard = {
+	map : null,
+	ownPositionMarker : null,
+	misterXCircle: null,
+	userPosition: null,
+	otherPlayers: new Array(),
+	initMap : function() {
+	// ...
+	}
+}
+
+$(document).ready(function() {
+
+	yard.initMap();
+	// ... 
+});
+					</code></pre>
+					</section>
+					<section>
+						<h2>JavaScript</h2>
+						<h5>Geolocation</h5>
+						<pre><code data-trim contenteditable>
+if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(function(position) {
+        yard.userPosition = position;	
+   }, function(error) {
+        // Fehler bei Geolocation 
+   });
+} else {
+    // Kein Geolocation im Browser 
+}
+					</code></pre> </section>
+					
+				</section>
+
+				<section>
+						<section>
+						<h2>PHP</h2>
+						<h5>REST mit Slim</h5>
+						<pre><code data-trim contenteditable>
+require '../lib/Slim/Slim.php';
+\Slim\Slim::registerAutoloader();
+
+$app = new \Slim\Slim();
+
+$app->get('/graph/', function() {
+   getGraph();
+});
+
+$app->post('/login/', 'login');
+
+function login() {
+   $request = \Slim\Slim::getInstance()->request();
+   $body = $request->getBody();
+   $requestData = json_decode($body);
+   addNewPlayer($requestData->name);
+}
+
+					</code></pre>
+					</section>
+					<section>
+						<h2>Aufruf aus JQuery</h2>
+							<pre><code data-trim contenteditable>
+$.ajax({
+  type : 'GET',
+  contentType : "text/json",
+  url : "api/server.php/graph",
+  dataType : "json",
+  success : function(data, textStatus, jqXHR) {
+    if(!data.loggedIn){
+      window.location = "index.html";
+    }
+    //...
+  },
+  error : function(jqXHR, textStatus, errorThrown) {
+    //... 
+  }
+});
+
+
+					</code></pre>					
+					</section>
+				</section>
+
+
+				<section>
+					<style type="text/css">
+						.logoBox {
+							float: left;
+							width: 30%;
+						}
+						.reveal section a img {
+							border: 0;
+						}
+					</style>
+					<section>
+						<h2>Tools</h2>
+								<div class="logoBox"><a href="http://www.slimframework.com/" target="_blank"><img src="bilder/slim.jpg" alt="Slim" width="300px"/> <br /> PHP Micro Framework</a></div>				
+								<div class="logoBox"><a href="http://www.jquerymobile.com/" target="_blank"><img src="bilder/jquery-mobile.png" alt="Jquery Mobile" width="300px"/> <br /> Jquery Mobile</a></div>
+								<div class="logoBox"><a href="http://www.leafletjs.com/" target="_blank"><img src="bilder/leaflet.png" alt="Slim" width="300px"/> <br /> Karten für mobile Apps</a></div>
+								<div class="logoBox"><td><a href="http://www.jquerymobile.com/" target="_blank"><img src="bilder/LaTeX.png" alt="Jquery Mobile" width="300px"/> <br /> LaTeX</a> </div>
+								<div class="logoBox"><td><a href="http://lab.hakim.se/reveal-js/" target="_blank"><img src="bilder/revealjs.jpg" alt="Slim" width="300px"/> <br /> HTML Presentation Framework</a></div>
+						</section>
+				</section>
+
+
+				<section>
+					<br /> <br /> <br /> <br />
+					<h3>Besten Dank für die Aufmerksamkeit</h3>
+					<br /> <br />
+					<h2>Fragen?</h2>
+				</section>
+
+
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme , // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'cube', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

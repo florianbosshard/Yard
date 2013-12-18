@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://localhost/presentation/#/?theme=blood.css -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+
+		<title>Winterthur Yard</title>
+
+		<meta name="description" content="Online Webapp">
+		<meta name="author" content="Florian Bosshard">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="http://localhost/presentation/css/reveal.min.css">
+		<link rel="stylesheet" href="http://localhost/presentation/css/theme/Reveal.getQueryHash().theme.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="http://localhost/presentation/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script><link rel="stylesheet" href="./Winterthur Yard_files/paper.css" type="text/css" media="print">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	<script src="./Winterthur Yard_files/webfont.js" type="text/javascript" async=""></script></head>
+
+	<body style="-webkit-transition: -webkit-transform 0.8s ease; transition: -webkit-transform 0.8s ease;">
+
+		<div class="reveal cube center" data-transition-speed="default" data-background-transition="default">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides no-transition" style="width: 960px; height: 700px; zoom: 1;">
+				<section style="top: -20px;">
+					<h1>Winterthur Yard</h1>
+					<h3>WBE Projekt Präsentation </h3>
+					<p>
+						<small>Raphael Spörri, Maja Fritschi, Florian Bosshard</small>
+					</p>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section style="top: -20px;">
+					<section style="top: -20px;">
+						<h2>Projektidee / Ziele</h2>
+						<img width="280" height="326" src="./Winterthur Yard_files/ziele.jpg" alt="Unicorn">
+					</section>
+					<section class="future" style="top: -20px;">
+						<h2>Scotland Yard</h2>
+						<ul>
+							<li class="fragment" data-fragment-index="0">Schnitzeljagd durch die Winterthurer Altstadt</li>
+							<li class="fragment" data-fragment-index="1">Mister X bewegt sich auf einem Graph entlang den Gassen der Altstadt </li>
+							<li class="fragment" data-fragment-index="2">Einsatz von Geolocation zur Ortung der Spieler</li>
+							<li class="fragment" data-fragment-index="3">Mister X kennt Koordinaten eines <a href="http://coord.info/GC4R53R" target="_blank">Geocaches</a></li>
+						</ul>
+					</section>
+					<section class="future" style="top: -20px;">
+						<h2>Ziele</h2>
+						<ul>
+							<li class="fragment" data-fragment-index="0">Schöne Stellen der Winterthurer Altstadt besuchen</li>
+							<li class="fragment" data-fragment-index="1">Funktionen des eigenen Mobiltelefon kennen lernen</li>
+							<li class="fragment" data-fragment-index="2">Ein Rätsel für einen Geocache erstellen, das bis jetzt einzigartig ist. </li>
+						</ul>
+					</section>
+					
+
+				</section>
+
+
+
+				<section style="top: -20px;">
+					<h2>Demo</h2>
+					
+					<a href="http://yard.prusik.ch/" target="_blank">http://yard.prusik.ch</a>
+
+				</section>
+
+				<section style="top: -20px;">
+					<section style="top: -20px;">
+						<h2>JavaScript</h2>
+						<h5>Grundsätzlicher Aufbau map.js</h5>
+						<pre><code data-trim="" contenteditable="" class="r">var yard = {
+	map : null,
+	ownPositionMarker : null,
+	misterXCircle: null,
+	userPosition: null,
+	otherPlayers: new Array(),
+	initMap : <span class="keyword">function</span>() {
+	// <span class="keyword">...</span>
+	}
+}
+
+$(document).ready(<span class="keyword">function</span>() {
+
+	yard.initMap();
+	// <span class="keyword">...</span> 
+});</code></pre>
+					</section>
+					<section class="future" style="top: -20px;">
+						<h2>JavaScript</h2>
+						<h5>Geolocation</h5>
+						<pre><code data-trim="" contenteditable="" class="actionscript"><span class="keyword">if</span> (navigator.geolocation) {
+    navigator.geolocation.watchPosition(<span class="function"><span class="keyword">function</span><span class="params">(position)</span> {</span>
+        yard.userPosition = position;	
+   }, <span class="function"><span class="keyword">function</span><span class="params">(error)</span> {</span>
+        <span class="comment">// Fehler bei Geolocation </span>
+   });
+} <span class="keyword">else</span> {
+    <span class="comment">// Kein Geolocation im Browser </span>
+}</code></pre> </section>
+					
+				</section>
+
+				<section style="top: -20px;">
+						<h2>PHP</h2>
+						<h5>REST mit Slim</h5>
+						<pre><code data-trim="" contenteditable="" class="perl"><span class="keyword">require</span> <span class="string">'../lib/Slim/Slim.php'</span>;
+\Slim\Slim::registerAutoloader();
+
+<span class="variable">$app</span> = new \Slim\Slim();
+
+<span class="variable">$app</span>-&gt;get(<span class="string">'/graph/'</span>, function() {
+   getGraph();
+});
+
+<span class="variable">$app</span>-&gt;post(<span class="string">'/login/'</span>, <span class="string">'login'</span>);
+
+function login() {
+   <span class="variable">$request</span> = \Slim\Slim::getInstance()-&gt;request();
+   <span class="variable">$body</span> = <span class="variable">$request</span>-&gt;getBody();
+   <span class="variable">$requestData</span> = json_decode(<span class="variable">$body</span>);
+   addNewPlayer(<span class="variable">$requestData</span>-&gt;name);
+}</code></pre>
+				</section>
+
+				<section style="top: -20px;">
+					<section style="top: -20px;">
+						<h2>Tools</h2>
+						<ul>
+							<li class="fragment" data-fragment-index="0"><a href="http://www.slimframework.com/" target="_blank">Slim</a> PHP Micro Framework</li>
+							<li class="fragment" data-fragment-index="1"><a href="http://jquery.com/" target="_blank">Jquery</a>/ <a href="http://jquerymobile.com/" target="_blank">Jquery Mobile</a></li>					
+							<li class="fragment" data-fragment-index="2"><a href="http://leafletjs.com/" target="_blank">LeafletJS</a> Karten für mobile Apps</li>
+							<li class="fragment" data-fragment-index="3"><a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> Online Karte unter offener Lizenz</li>
+							<li class="fragment" data-fragment-index="4"><a href="http://leafletjs.com/" target="_blank">LeafletJS</a> Karten für mobile Apps</li>
+							<li class="fragment" data-fragment-index="5"><a href="http://localhost/presentation/lab.hakim.se/reveal-js/%E2%80%8E" target="_blank">revealJS</a> HTML Presentation Framework</li>
+							<li class="fragment" data-fragment-index="6">LaTeX</li>
+						</ul>
+					
+
+					</section>
+				</section>
+
+
+				<section style="top: -20px;">
+					<br> <br> <br> <br>
+					<h3>Besten Dank für die Aufmerksamkeit</h3>
+					<br> <br>
+					<h2>Fragen?</h2>
+				</section>
+
+
+
+			</div>
+
+		<div class="backgrounds"><div class="slide-background present"></div><div class="slide-background present"><div class="slide-background present"></div><div class="slide-background present"></div><div class="slide-background present"></div></div><div class="slide-background present"></div><div class="slide-background present"><div class="slide-background present"></div><div class="slide-background present"></div></div><div class="slide-background present"></div><div class="slide-background present"><div class="slide-background present"></div></div><div class="slide-background present"></div></div><div class="progress" style="display: block;"><span style="width: 1819.9999999999998px;"></span></div><aside class="controls" style="display: block;"><div class="navigate-left"></div><div class="navigate-right"></div><div class="navigate-up"></div><div class="navigate-down"></div></aside><div class="slide-number"></div><div class="state-background"></div><div class="pause-overlay"></div></div>
+
+		<script src="./Winterthur Yard_files/head.min.js"></script>
+		<script src="./Winterthur Yard_files/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: "Reveal.getQueryHash().theme" , // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'cube', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script><script type="text/javascript" src="./Winterthur Yard_files/highlight.js"></script><script type="text/javascript" src="./Winterthur Yard_files/zoom.js"></script><script type="text/javascript" src="./Winterthur Yard_files/notes.js"></script>
+
+	
+
+</body></html>
