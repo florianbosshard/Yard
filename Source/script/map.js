@@ -27,6 +27,10 @@ var yard = {
 			url : "api/server.php/graph",
 			dataType : "json",
 			success : function(data, textStatus, jqXHR) {
+				console.log(data);
+				if(!data.loggedIn){
+					 window.location = "index.html";
+				}
 				for (var i = 0; i < data.nodes.length; i++) {
 					yard.drawNode(data.nodes[i].longitude, data.nodes[i].latitude, data.nodes[i].Id);
 				};

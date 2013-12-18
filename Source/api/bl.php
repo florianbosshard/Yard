@@ -17,6 +17,11 @@ if(!$dbCon){
 }
 
 function getGraph() {
+	
+	if(!(is_array($_SESSION) && isset($_SESSION['userId']))){
+		die(json_encode(array("loggedIn" => false)));
+	}	
+		
 	$nodeArray = array();
 	$lineArray = array();
 
@@ -49,7 +54,7 @@ function getGraph() {
 	}
 
 	//Erzeugung der Graph-Array
-	$graphArray = array("nodes" => $nodeArray, "lines" => $lineArray);
+	$graphArray = array("nodes" => $nodeArray, "lines" => $lineArray, "loggedIn" => true);
 
 	echo json_encode($graphArray);
 }
