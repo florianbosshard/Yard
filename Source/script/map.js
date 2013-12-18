@@ -8,7 +8,6 @@ var yard = {
 	* Initializes the map 
 	*
 	* @method initMap
-	* @return {void}
 	*/
 	initMap : function() {
 		map = new L.Map('map', {
@@ -27,7 +26,6 @@ var yard = {
 	* If the user is not logged in, he is redirected to index.html
 	*
 	* @method drawGraph
-	* @return {void} Returns true on success
 	*/
 	drawGraph : function() {
 		$.ajax({
@@ -59,7 +57,6 @@ var yard = {
 	* Creates a Listener for a changed user position and shows player icon. If there is an error with the gps signal, user will be redirected to gpsError.html
 	*
 	* @method markUserLocation
-	* @return {void} 
 	*/
 	markUserLocation : function() {
 	     //Extend the Default marker class
@@ -87,10 +84,9 @@ var yard = {
 		}
 	},
 	/**
-	 * Procedure which is called, when a user clicks the catchMiserX button
+	 * Procedure which is called, when a user clicks the catchMiserX button Uses Webservice anfrage
 	 * 
 	 * @method catchMisterX
-	 * @return {void}
 	 */
 	catchMisterX : function() {
 		// send current position to server
@@ -121,6 +117,12 @@ var yard = {
 		});
 			
 	},
+	/**
+	 * Removes MisterXCircle and the other Players
+	 * (The symbol of the player itself is handled by yard.markUserLocation)
+	 * 
+	 * @method removeItemsFromMap
+	 */
 	removeItemsFromMap : function(){
 		if(yard.misterXCircle){
 			map.removeLayer(yard.misterXCircle);
@@ -129,6 +131,12 @@ var yard = {
 			map.removeLayer(yard.otherPlayers.pop());
 		}
 	},
+	/**
+	* Draws a circle for the position of MisterX
+	*
+	* @method addMisterXToMap
+	* @param {object} misterxLast, contains Longitude and Latitude
+	*/
 	addMisterXToMap: function(misterXLast){
 		if(misterXLast){
 			yard.misterXCircle = L.circle([misterXLast.longitude, misterXLast.latitude], 10, {
@@ -138,7 +146,13 @@ var yard = {
 			});						
 			yard.misterXCircle.addTo(map);
 		}
-	},
+	},	
+	/**
+	* Adds for each other player a symbol on the map
+	*
+	* @method addOtherPlayersToMap
+	* @param {array} array containing the other players
+	*/
 	addOtherPlayersToMap: function(datOtherPlayers){
 		if(datOtherPlayers){
 			// Remove existing markers
@@ -149,6 +163,12 @@ var yard = {
 			}	
 		}	
 	},
+	/**
+	* Adds for each other player a symbol on the map
+	*
+	* @method addOtherPlayerToMap
+	* @param {object} an other Player with a Name, Position and Zeitpunkt
+	*/
 	addOtherPlayerToMap : function(otherPlayer) {
 		//Extend the Default marker class
          var BlueIcon = L.Icon.Default.extend({
@@ -171,7 +191,14 @@ var yard = {
 		
 		
 	},
+	/**
+	* Converts the given timestring in format DDDD-MM-YY HH:MM:SS to a Date object.
+	*
+	* @method getDateObj
+	* @param {object} an other Player with a Name, Position and Zeitpunkt
+	*/
 	getDateObj : function(datestring){
+		// Date.parse does not work in every browser
 		if(Date.parse(datestring)){
 			return Date.parse(datestring);
 		} else {
@@ -179,6 +206,13 @@ var yard = {
 			return new Date (dateArr[0],dateArr[1]-1,dateArr[2],dateArr[3],dateArr[4],dateArr[5] );
 		}
 	},
+	/**
+	 * Draws a node on the map. Is used for painting the graph
+	 * 
+	 * @param {double} lat Latitude
+	 * @param {double} lon Longitude
+	 * @param {int} id Id of the Node, can be used for testing
+	 */
 	drawNode : function(lat, lon, id) {
 		var circle = L.circle([lat, lon], 10, {
 			color : 'blue',
@@ -186,11 +220,22 @@ var yard = {
 			fillOpacity : 0.3
 		}).addTo(map);
 	},
+	/**
+	 * Draws a Line on the map. Is used for painting the graph
+	 * @param {double} latFrom latitude from
+	 * @param {double} longFrom longitude from
+	 * @param {double} latTo latitude from
+	 * @param {double} longTo longitude from
+	 */
 	drawLine : function(latFrom, longFrom, latTo, longTo) {
 		var from = new L.LatLng(latFrom, longFrom);
 		var to = new L.LatLng(latTo, longTo);
 		yard.drawPolyLine([from, to]);
 	},
+	/**
+	 * Draws a line with multiple points. Is used for painting the graph
+ 	 * @param {Object} pointList
+	 */
 	drawPolyLine : function(pointList) {
 		var polyline = new L.Polyline(pointList, {
 			color : 'blue',
