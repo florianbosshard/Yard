@@ -10,7 +10,6 @@ require '../lib/Slim/Slim.php';
 
 $app = new \Slim\Slim();
 
-
 $app->get('/graph/', function() {
 	getGraph();
 });
