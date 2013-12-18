@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Winterthur Yard</title>
+
+		<meta name="description" content="Online Webapp">
+		<meta name="author" content="Florian Bosshard">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Winterthur Yard</h1>
+					<h3>WBE Projekt Präsentation </h3>
+					<p>
+						<small>Raphael Spörri, Maja Fritschi, Florian Bosshard</small>
+					</p>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>Projektidee / Ziele</h2>
+						<img width="280" height="326" src="img/ziele.jpg" alt="Unicorn">
+					</section>
+					<section>
+						<h2>Scotland Yard</h2>
+						<ul>
+							<li class="fragment">Schnitzeljagd durch die Winterthurer Altstadt</li>
+							<li class="fragment">Mister X bewegt sich auf einem Graph entlang den Gassen der Altstadt </li>
+							<li class="fragment">Einsatz von Geolocation zur Ortung der Spieler</li>
+							<li class="fragment">Mister X kennt Koordinaten eines <a href="http://coord.info/GC4R53R" target="_blank">Geocaches</a></li>
+						</ul>
+					</section>
+					<section>
+						<h2>Ziele</h2>
+						<ul>
+							<li class="fragment">Schöne Stellen der Winterthurer Altstadt besuchen</li>
+							<li class="fragment">Funktionen des eigenen Mobiltelefon kennen lernen</li>
+							<li class="fragment">Ein Rätsel für einen Geocache erstellen, das bis jetzt einzigartig ist. </li>
+						</ul>
+					</section>
+					
+
+				</section>
+
+
+
+				<section>
+					<h2>Demo</h2>
+					
+					<a href="http://yard.prusik.ch" target="_blank">http://yard.prusik.ch</a>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>JavaScript</h2>
+						<h5>Grundsätzlicher Aufbau map.js</h5>
+						<pre><code data-trim contenteditable>
+var yard = {
+	map : null,
+	ownPositionMarker : null,
+	misterXCircle: null,
+	userPosition: null,
+	otherPlayers: new Array(),
+	initMap : function() {
+	// ...
+	}
+}
+
+$(document).ready(function() {
+
+	yard.initMap();
+	// ... 
+});
+					</code></pre>
+					</section>
+					<section>
+						<h2>JavaScript</h2>
+						<h5>Geolocation</h5>
+						<pre><code data-trim contenteditable>
+if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(function(position) {
+        yard.userPosition = position;	
+   }, function(error) {
+        // Fehler bei Geolocation 
+   });
+} else {
+    // Kein Geolocation im Browser 
+}
+					</code></pre> </section>
+					
+				</section>
+
+				<section>
+						<h2>PHP</h2>
+						<h5>REST mit Slim</h5>
+						<pre><code data-trim contenteditable>
+require '../lib/Slim/Slim.php';
+\Slim\Slim::registerAutoloader();
+
+$app = new \Slim\Slim();
+
+$app->get('/graph/', function() {
+   getGraph();
+});
+
+$app->post('/login/', 'login');
+
+function login() {
+   $request = \Slim\Slim::getInstance()->request();
+   $body = $request->getBody();
+   $requestData = json_decode($body);
+   addNewPlayer($requestData->name);
+}
+
+					</code></pre>
+				</section>
+
+				<section>
+					<section>
+						<h2>Tools</h2>
+						<ul>
+							<li class="fragment"><a href="http://www.slimframework.com/" target="_blank">Slim</a> PHP Micro Framework</li>
+							<li class="fragment"><a href="http://jquery.com/" target="_blank">Jquery</a>/ <a href="http://jquerymobile.com/" target="_blank">Jquery Mobile</a></li>					
+							<li class="fragment"><a href="http://leafletjs.com/" target="_blank">LeafletJS</a> Karten für mobile Apps</li>
+							<li class="fragment"><a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> Online Karte unter offener Lizenz</li>
+							<li class="fragment"><a href="http://leafletjs.com/" target="_blank">LeafletJS</a> Karten für mobile Apps</li>
+							<li class="fragment"><a href="lab.hakim.se/reveal-js/‎" target="_blank">revealJS</a> HTML Presentation Framework</li>
+							<li class="fragment">LaTeX</li>
+						</ul>
+					
+
+					</section>
+				</section>
+
+
+				<section>
+					<br /> <br /> <br /> <br />
+					<h3>Besten Dank für die Aufmerksamkeit</h3>
+					<br /> <br />
+					<h2>Fragen?</h2>
+				</section>
+
+
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme , // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'cube', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
