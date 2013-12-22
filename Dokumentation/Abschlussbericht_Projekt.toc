@@ -1,4 +1,16 @@
-\contentsline {section}{\numberline {1}Projektteam}{2}
-\contentsline {section}{\numberline {2}Umgesetzte Funktionalit\IeC {\"a}ten}{2}
-\contentsline {section}{\numberline {3}Technologien}{2}
-\contentsline {section}{\numberline {4}Abschliessend}{3}
+\contentsline {section}{\numberline {1}Applikation}{2}
+\contentsline {section}{\numberline {2}Projektteam}{2}
+\contentsline {section}{\numberline {3}Funktionen}{2}
+\contentsline {subsection}{\numberline {3.1}Login}{2}
+\contentsline {subsection}{\numberline {3.2}Kartenanzeige}{2}
+\contentsline {subsection}{\numberline {3.3}Catch Me}{3}
+\contentsline {section}{\numberline {4}Aufbau der Applikation}{4}
+\contentsline {subsection}{\numberline {4.1}JavaScript}{4}
+\contentsline {subsection}{\numberline {4.2}Kommunikation zum Server}{5}
+\contentsline {subsection}{\numberline {4.3}Datenbank}{5}
+\contentsline {section}{\numberline {5}Erweiterungen}{5}
+\contentsline {section}{\numberline {6}Fazit}{6}
+\contentsline {subsection}{\numberline {6.1}JQuery Mobile}{6}
+\contentsline {subsection}{\numberline {6.2}LeafletJS}{6}
+\contentsline {subsection}{\numberline {6.3}Slim}{6}
+\contentsline {subsection}{\numberline {6.4}RevealJS}{6}
