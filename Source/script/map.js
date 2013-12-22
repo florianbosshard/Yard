@@ -89,6 +89,10 @@ var yard = {
 	 * @method catchMisterX
 	 */
 	catchMisterX : function() {
+		$("#btnCatchMisterX").attr("disabled", true);
+		
+		
+		
 		// send current position to server
 		 $.ajax({
 			type : 'POST',
@@ -100,7 +104,8 @@ var yard = {
 				"longitude" : yard.userPosition.coords.longitude
 			}),
 			success : function(data, textStatus, jqXHR) {
-
+				$("#btnCatchMisterX").attr("disabled", false);
+		
 				yard.removeItemsFromMap();
 				yard.addMisterXToMap(data.MisterXLast);
 				yard.addOtherPlayersToMap(data.OtherPlayers);
@@ -111,6 +116,7 @@ var yard = {
 
 			},
 			error : function(jqXHR, textStatus, errorThrown) {
+				$("#btnCatchMisterX").attr("disabled", false);
 				console.log(textStatus);
 				console.log(errorThrown);
 			}
